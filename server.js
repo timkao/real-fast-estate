@@ -4,12 +4,27 @@ const port = process.env.PORT || 3000;
 const path = require('path');
 const axios = require('axios');
 const apikey = '08ebe91ec661e3835a9a469936689b89';
-
+const router = require('./server/api/property');
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
+app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
+let config = process.env;
+try {
+  config = require('./env.json');
+}
+catch(ex){
+  console.log('error!');
+}
+
+app.use(function(req, res, next){
+  res.locals.GOOGLE_API_KEY = config.GOOGLE_API_KEY;
+  next();
+});
 
 app.get('/data', (req, res, next) => {
-  axios.get('https://search.onboard-apis.com/propertyapi/v1.0.0/property/snapshot?latitude=39.7047&longitude=-105.0814&radius=3', {
+  axios.get('https://search.onboard-apis.com/propertyapi/v1.0.0/property/address?address1=803%20Sip%20Street&address2=union%20city%2C%20nj&radius=0.1&propertytype=CONDOMINIUM&orderby=distance&page=1&pagesize=100', {
     headers: {
       'Accept': 'application/json',
       'apikey': apikey
@@ -22,6 +37,8 @@ app.get('/data', (req, res, next) => {
   .catch(next);
 
 })
+
+app.use('/api', router);
 
 app.get('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, 'index.html'));
