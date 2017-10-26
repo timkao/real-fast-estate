@@ -5,6 +5,7 @@ const path = require('path');
 const axios = require('axios');
 const apikey = '08ebe91ec661e3835a9a469936689b89';
 const router = require('./server/api/property');
+const bodyParser = require('body-parser');
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
@@ -38,10 +39,19 @@ app.get('/data', (req, res, next) => {
 
 })
 
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
 app.use('/api', router);
 
 app.get('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, 'index.html'));
+})
+
+app.use(function (err, req, res, next) {
+  console.error(err.message)
+  res.status(500).send('Something broke!')
 })
 
 app.listen(port, function(){
