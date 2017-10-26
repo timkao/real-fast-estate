@@ -5,8 +5,10 @@ import store, {
   insertAutoComplete,
   fetchPropertiesSales,
   getCurrentSpot,
-  fetchLatLngAndProperty
+  fetchLatLngAndProperty,
+  fetchAddressByLatLng
 } from '../store';
+import { Link } from 'react-router-dom';
 
 
 class SearchForm extends Component {
@@ -22,19 +24,12 @@ class SearchForm extends Component {
   }
 
   handleSubmit(evt) {
-    evt.preventDefault();
-    if (evt.target.location.value === '') {
-      store.dispatch(getCurrentSpot(''));
-      store.dispatch(fetchLatLngAndProperty());
-    }
-    else {
-      const thunk = fetchPropertiesSales(this.props.currentSpot);
-      store.dispatch(thunk);
-    }
+    this.props.toDashBoard(evt, this.props.currentSpot, this.props.latLng);
   }
 
   render() {
     return (
+      <div>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Location</label>
@@ -42,6 +37,8 @@ class SearchForm extends Component {
             <button className="btn btn-primary">Tap to Grab Property</button>
           </div>
         </form>
+        <Link to="/dashboard">To dashboard</Link>
+        </div>
     )
   }
 }
@@ -54,8 +51,23 @@ const mapToState = (state) => {
   }
 }
 
-const mapToProps = (dispatch) => {
+const mapToProps = (dispatch, ownProps) => {
   return {
+    toDashBoard(evt, spot, latLng) {
+      evt.preventDefault();
+      if (evt.target.location.value === '') {
+        dispatch(getCurrentSpot(''));
+        const thunk = fetchLatLngAndProperty(ownProps.history)
+        dispatch(thunk);
+      }
+      else {
+        const [lat, lng] = latLng;
+        const thunk2 = fetchAddressByLatLng([lat, lng, ownProps.history]);
+        dispatch(thunk2);
+        // const thunk2 = fetchPropertiesSales(spot, ownProps.history);
+        // dispatch(thunk2);
+      }
+    }
   }
 }
 

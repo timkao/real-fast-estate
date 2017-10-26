@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SearchForm from './searchForm';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
+import DashBoard from './dashBoard';
 
 
 class Main extends Component {
@@ -15,6 +16,7 @@ class Main extends Component {
       <div className="container">
         <Switch>
           <Route exact path="/" component={SearchForm} />
+          <Route exact path="/dashboard" component={DashBoard} />
         </Switch>
       </div>
     )
@@ -34,7 +36,7 @@ const mapToProps = (dispatch) => {
   }
 }
 
-const mainContainer = connect(mapToState, mapToProps)(Main);
+const mainContainer = withRouter(connect(mapToState, mapToProps)(Main));
 
 export default mainContainer;
 

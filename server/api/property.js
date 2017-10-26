@@ -30,7 +30,7 @@ router.post('/property/sales', (req, res, next) => {
   // const propertyType = 'CONDOMINIUM';
   const orderby = 'distance';
   const page = 1;
-  const pagesize = 100;
+  const pagesize = 300;
   const address1 = req.body.address1;
   const address2 = req.body.address2;
 

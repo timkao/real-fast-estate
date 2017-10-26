@@ -24,7 +24,7 @@ export const fetchNearProperties = (address) => {
   }
 }
 
-export const fetchPropertiesSales = (address) => {
+export const fetchPropertiesSales = (address, history) => {
   const tempAddress = address.split(',');
   const address1 = encodeURIComponent(tempAddress[0]);
   const address2 = encodeURIComponent(tempAddress[1].slice(1) + ', ' + tempAddress[2].slice(1, 3).toLowerCase());
@@ -35,6 +35,7 @@ export const fetchPropertiesSales = (address) => {
       console.log(propertyObj.status);
       const action = getProperties(propertyObj.property);
       dispatch(action);
+      history.push('/dashboard');
     })
   }
 }

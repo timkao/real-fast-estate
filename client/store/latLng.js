@@ -12,7 +12,7 @@ export const getLatLng = (latLng) => {
   }
 }
 
-export const fetchAddressByLatLng = ([lat, lng]) => {
+export const fetchAddressByLatLng = ([lat, lng, history]) => {
   return function(dispatch) {
     axios.post('/api/property/address', {lat, lng})
     .then(result => result.data)
@@ -20,20 +20,20 @@ export const fetchAddressByLatLng = ([lat, lng]) => {
       const address = propertyObj.property[0].address.oneLine
       const action = getCurrentSpot(address);
       dispatch(action);
-      const thunk = fetchPropertiesSales(address);
+      const thunk = fetchPropertiesSales(address, history);
       dispatch(thunk);
     })
   }
 }
 
-export const fetchLatLngAndProperty = () => {
+export const fetchLatLngAndProperty = (history) => {
   return function(dispatch) {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
         const lat = position.coords.latitude;
         const lng = position.coords.longitude;
         dispatch(getLatLng([lat, lng]));
-        dispatch(fetchAddressByLatLng([lat, lng]));
+        dispatch(fetchAddressByLatLng([lat, lng, history]));
       });
     } else {
       console.log('nothing...');
@@ -51,7 +51,6 @@ export const insertAutoComplete = () => {
         window.alert("No details available for input: '" + place.name + "'");
         return;
       }
-      console.log(place);
       const lat = place.geometry.location.lat();
       const lng = place.geometry.location.lng();
       const name = place.formatted_address;
