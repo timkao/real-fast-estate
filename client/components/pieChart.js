@@ -17,14 +17,16 @@ class PieChart extends Component {
 
     // data
     const dataset = this.state.pieData;
-    const pie = d3.pie();
-    var color = d3.scaleOrdinal(d3.schemeCategory10);
+    const pie = d3.pie().padAngle(0.06);
+    // var color = d3.scaleOrdinal(d3.schemeCategory10);
+    const color = ['#CB9190', '#BCCDDF', '#8F613F', '#5AA6A2', '#B3986B', '#797367'];
     const pieDataset = pie(dataset);
 
     // scale
     const outerRadius = (canvasWidth / 500) * 150;
-    const innerRadius = 0;
+    const innerRadius = 5;
     const arc = d3.arc()
+      .cornerRadius(10)
       .innerRadius(innerRadius)
       .outerRadius(outerRadius);
 
@@ -39,15 +41,15 @@ class PieChart extends Component {
             pieDataset.map((data, i) => {
               return (
                 <g key={i} className="arc" transform={`translate(${outerRadius}, ${outerRadius})`}>
-                  <path fill={color(i)} d={arc(data)}></path>
+                  <path fill={color[i]} d={arc(data)}></path>
                   <text textAnchor="middle" transform={`translate(${arc.centroid(data)})`}>
                     {data.value}
                   </text>
                   {
-                    data.value !== 0 && <rect x={outerRadius + 5} y={i * 25 - outerRadius} height={rectLength} width={rectLength} fill={color(i)}></rect>
+                    data.value !== 0 && <rect x={outerRadius + 5} y={i * 25 - outerRadius} height={rectLength} width={rectLength} fill={color[i]}></rect>
                   }
                   {
-                    data.value !== 0 && <text x={ outerRadius + 10 + Number(rectLength) + 5} y={i * 25 - outerRadius + rectLength * 1 / 1.5}>{labels[i]}</text>
+                    data.value !== 0 && <text x={ outerRadius + 10 + Number(rectLength) + 5} y={i * 25 - outerRadius + rectLength * 1 / 1.5} fontSize="10px">{labels[i]}</text>
                   }
                 </g>
               )

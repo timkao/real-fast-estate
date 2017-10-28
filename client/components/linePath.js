@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
 import { connect } from 'react-redux';
+import lodash from 'lodash';
 
 class LineChart extends Component {
 
   constructor(props) {
     super(props)
     this.renderAxis = this.renderAxis.bind(this);
-    this.state = {data: this.props.data}
+    this.state = { data: this.props.data, transitionData: [] };
   }
 
   componentDidMount() {
@@ -19,37 +20,30 @@ class LineChart extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-
+    if (!lodash.isEqual(nextProps.data, this.props.data) || nextProps.data.length !== this.state.transitionData.length) {
+      const newData = nextProps.data;
+      d3.selectAll(".line").transition().duration(1000).ease(d3.easeLinear).tween("attr.scale", () => {
+        const interpolator = d3.interpolateNumber(0, newData.length);
+        return (t) => {
+          const endpoint = Math.floor(interpolator(t))
+          this.setState({ data: newData, transitionData: newData.slice(0, endpoint) });
+        }
+      })
+    }
   }
 
   renderAxis() {
-    // const canvasWidth = 600;
-    // const canvasHeight = 300;
-    // const padding = 20;
 
-    const dataset = this.state.data;
-
-    const xScale = d3.scaleTime()
-                     .domain([
-                       d3.min(dataset, function(row){ return row.date}),
-                       d3.max(dataset, function(row){ return row.date})
-                     ])
-                     .range([padding, canvasWidth]);
-
-    const yScale = d3.scaleLinear()
-                     .domain([300, d3.max(dataset, function(row){ return row.average})])
-                     .range([canvasHeight - padding, 0]);
+    const { xScale, yScale } = this.props;
 
     const formatTime = d3.timeFormat("%Y %b");
 
     const xAxis = d3.axisBottom()
-                    .scale(xScale)
-                    .ticks(10)
-                    .tickFormat(formatTime);
+      .scale(xScale)
+      .tickFormat(formatTime);
 
     const yAxis = d3.axisLeft()
-                    .scale(yScale)
-                    .ticks(10);
+      .scale(yScale)
 
     d3.select("#line-Xaxis").call(xAxis);
     d3.select("#line-Yaxis").call(yAxis);
@@ -57,46 +51,52 @@ class LineChart extends Component {
 
 
   render() {
-    // canvas setting
-    const canvasWidth = 800;
-    const canvasHeight = 300;
-    const padding = 20;
+    const { xScale, yScale, canvasHeight, canvasWidth, padding } = this.props;
 
     // data
-    const dataset = this.state.data;
+    // const dataset = this.state.data;
 
-    // scale
-    const xScale = d3.scaleTime()
-                     .domain([
-                       d3.min(dataset, function(row){ return row.date}),
-                       d3.max(dataset, function(row){ return row.date})
-                     ])
-                     .range([padding, canvasWidth]);
+    // tranistion
+    let dataset = [];
+    if (this.state.transitionData.length > 0) {
+      dataset = this.state.transitionData;
+    } else {
+      dataset = this.state.data;
+    }
 
-    const yScale = d3.scaleLinear()
-                     .domain([300, d3.max(dataset, function(row){ return row.average})])
-                     .range([canvasHeight - padding, 0]);
-    // label
-
+    let onebed = [];
+    let twobed = [];
+    let threebed = [];
+    let zerobed = [];
+    let othersbed = [];
+    dataset.forEach( property => {
+      if (property.room == "0") {
+        zerobed.push(property);
+      } else if (property.room == "1") {
+        onebed.push(property);
+      } else if (property.room == "2") {
+        twobed.push(property);
+      } else if (property.room == "3") {
+        threebed.push(property);
+      } else {
+        othersbed.push(property);
+      }
+    })
     // Line Generator
     const line = d3.line()
-                   .x(function(row){ return xScale(row.date)})
-                   .y(function(row){ return yScale(row.average)});
+      .x(function (row) { return xScale(row.date) })
+      .y(function (row) { return yScale(row.amount) })
+      .curve(d3.curveBasis);
 
-
-    // const dangerLine = d3.line()
-    //                .defined(function(row){ return row.average > 350})
-    //                .x(function(row){ return xScale(row.date)})
-    //                .y(function(row){ return yScale(row.average)});
     let key = 0;
 
     return (
       <div>
         <svg id="line-chart" width={canvasWidth} height={canvasHeight}>
-          <path className="line" d={line(dataset)}></path>
-          {/* <path className="dangerLine" d={dangerLine(dataset)}></path> */}
-          {/* <line x1={padding} x2={canvasWidth} y1={yScale(350)} y2={yScale(350)} className="safeLevel"></line> */}
-          {/* <text x={padding + 10} y={yScale(350) - 5}>350ppm "safe" level</text> */}
+          <path className="line" d={line(zerobed)} stroke='black'></path>
+          <path className="line" d={line(onebed)} stroke='red'></path>
+          <path className="line" d={line(twobed)} stroke='blue'></path>
+          <path className="line" d={line(threebed)} stroke='green'></path>
           <g id="line-Xaxis" className="axis" transform={`translate(0, ${canvasHeight - padding} )`}></g>
           <g id="line-Yaxis" className="axis" transform={`translate(${padding}, 0)`}></g>
         </svg>

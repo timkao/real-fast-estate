@@ -5,6 +5,7 @@ import PieChart from './pieChart';
 import BarChart from './barChart';
 import DonutChart from './donutChart';
 import * as d3 from 'd3';
+import LinePath from './linePath';
 
 
 // Massage All the data here
@@ -164,7 +165,7 @@ class DashBoard extends Component {
     const _pathdata = _properties.map(property => {
       return {
         date: parseTime(property.sale.amount.salerecdate),
-        amount: property.sale.amount.saleamt,
+        amount: property.sale.amount.saleamt * 1 / 1000,
         type: property.summary.proptype,
         room: property.building.rooms.beds
       }
@@ -178,11 +179,10 @@ class DashBoard extends Component {
       }
       return acc;
     }, [])
-    console.log('path choices', pathChoices);
 
     const canvasWidth = 600;
     const canvasHeight = 300;
-    const padding = 20;
+    const padding = 40;
 
     const xScale = d3.scaleTime()
       .domain([
@@ -209,11 +209,23 @@ class DashBoard extends Component {
     }, {})
     console.log(pathObj);
     let pathdata = [];
-    if (pathChoices[this.props.pathType]) {
+    if (pathChoices.includes(this.props.pathType)) {
+      console.log('---------------------')
+      console.log(this.props.pathType);
       pathdata = pathObj[this.props.pathType];
-    } else {
+    } else if (pathChoices.length !== 0) {
+      console.log('xxxxxxxxxxxxxxxxxxxxx');
       pathdata = pathObj[pathChoices[0]];
+    } else {
+      pathdata = [];
     }
+    if (pathdata.length > 2) {
+      pathdata = pathdata.sort(function (a, b) {
+        return a.date - b.date;
+      })
+    }
+    pathdata = pathdata.filter(data => data.date > 0);
+    console.log('path choices', pathChoices);
     console.log('path data: ', pathdata);
 
     // linePath chart data --------------------------------------
@@ -276,6 +288,7 @@ class DashBoard extends Component {
                 }
               </ul>
             </nav>
+            <LinePath data={pathdata} xScale={xScale} yScale={yScale} canvasHeight={canvasHeight} canvasWidth={canvasWidth} padding={padding} />
           </div>
         </div>
       </div>

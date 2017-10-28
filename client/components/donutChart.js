@@ -42,25 +42,27 @@ class DonutChart extends Component {
 
     // data
     const dataset = this.state.donutData;
-    const pie = d3.pie().sort(null);
-    var color = d3.scaleOrdinal(d3.schemeCategory10);
+    const pie = d3.pie().sort(null)
+    // var color = d3.scaleOrdinal(d3.schemeCategory10);
     const pieDataset = pie(dataset);
+    const color = ['#62622C', '#858C62', '#EAC249', '#DD735B', '#C1402A'];
 
 
     // scale
     const outerRadius = (canvasWidth / 500) * 150;
     const innerRadius = outerRadius / 3;
     const arc = d3.arc()
+      .cornerRadius(10)
       .innerRadius(innerRadius)
       .outerRadius(outerRadius);
 
     // legend
     const labels = this.state.labels.map( label => {
       if (label === "0") {
-        return 'Studio o No Record';
+        return 'Zero/No Record';
       }
       else {
-        return label + ' bedroom';
+        return label + ' Bedroom';
       }
     })
     const rectLength = "20";
@@ -72,12 +74,12 @@ class DonutChart extends Component {
             pieDataset.map((data, i) => {
               return (
                 <g key={i} className="arc" transform={`translate(${outerRadius}, ${outerRadius})`}>
-                  <path fill={color(i)} d={arc(data)}></path>
+                  <path fill={color[i]} d={arc(data)}></path>
                   <text textAnchor="middle" transform={`translate(${arc.centroid(data)})`}>
                     {data.value !== 0 && Math.floor(data.value)}
                   </text>
                   {
-                    data.value !== 0 && <rect x={outerRadius + 5} y={i * 25 - outerRadius} height={rectLength} width={rectLength} fill={color(i)}></rect>
+                    data.value !== 0 && <rect x={outerRadius + 5} y={i * 25 - outerRadius} height={rectLength} width={rectLength} fill={color[i]}></rect>
                   }
                   {
                     data.value !== 0 && <text x={ outerRadius + 10 + Number(rectLength) + 5} y={i * 25 - outerRadius + rectLength * 1 / 1.5}>{labels[i]}</text>

@@ -74,7 +74,9 @@ class BarChart extends Component {
       .range([0, canvasHeight - padding]);
 
     // fill
+    const thresholdMax = d3.max(dataset);
     const threshold = this.state.rangeValue;
+
 
     let key = 0;
 
@@ -82,7 +84,7 @@ class BarChart extends Component {
       <div className="row">
         <div className="col-lg-1">
           <p>
-            <input onChange={this.handleChange} id="slider" type="range" min="0" max="25" step="1" value={this.state.rangeValue} orient="vertical" />
+            <input title={this.state.rangeValue} onChange={this.handleChange} id="slider" type="range" min="10" max={thresholdMax} step="1" value={this.state.rangeValue} orient="vertical" />
           </p>
         </div>
         <div className="col-lg-11">
@@ -90,7 +92,7 @@ class BarChart extends Component {
             {
               dataset.map((data, index) => {
                 return (
-                  <rect key={key++} x={xScale(index)} y={canvasHeight - yScale(data)} width={xScale.bandwidth()} height={yScale(data)} fill={ data > threshold ? `rgb(0, 0, ${Math.round(data * 10)})` : "red" }>
+                  <rect key={key++} x={xScale(index)} y={canvasHeight - yScale(data)} width={xScale.bandwidth()} height={yScale(data)} fill={ data > threshold ? `#605A64` : "#781011" } className="bar-chart-rect">
                   </rect>
                 )
               })
@@ -98,7 +100,7 @@ class BarChart extends Component {
             {
               dataset.map((data, index) => {
                 return (
-                  <text key={key++} textAnchor="middle" x={xScale(index) + xScale.bandwidth() / 2} y={canvasHeight - yScale(data) + 14} fill="white" fontSize="11px">
+                  <text key={key++} textAnchor="middle" x={xScale(index) + xScale.bandwidth() / 2} y={canvasHeight - yScale(data) + 14} fill="white" fontSize="8px">
                     {Math.floor(data)}
                   </text>
                 )
