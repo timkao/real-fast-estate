@@ -40,6 +40,16 @@ export const fetchPropertiesSales = (address, history) => {
   }
 }
 
+export const saveProperties = (properties, center) => {
+  return function(dispatch) {
+    axios.post('/api/property/save', {mylist: properties, center})
+    .then( result => result.data)
+    .then( propertyList => {
+      console.log(propertyList);
+    })
+  }
+}
+
 const reducer = ( state = [], action) => {
   switch (action.type) {
     case GET_PROPERTIES:

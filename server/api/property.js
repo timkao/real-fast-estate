@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const axios = require('axios');
 const apikey = '08ebe91ec661e3835a9a469936689b89';
+const Property = require('../db').models.Property;
 
 
 router.post('/property', (req, res, next) => {
@@ -69,7 +70,13 @@ router.post('/property/address', (req, res, next) => {
   .catch(next);
 })
 
-
+router.post('/property/save', (req, res, next) => {
+  Property.create(req.body)
+  .then( list => {
+    res.send(list)
+  })
+  .catch(next);
+})
 
 router.get('/property', (req, res, next) => {
   res.send('property api linked!');

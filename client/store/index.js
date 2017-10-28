@@ -5,11 +5,15 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import properties from './properties';
 import currentSpot from './currentSpot';
 import latLng from './latLng';
+import barType from './barType';
+import roomType from './roomType';
 
 const reducer = combineReducers({
   properties,
   currentSpot,
-  latLng
+  latLng,
+  barType,
+  roomType
 });
 
 const store = createStore(
@@ -25,3 +29,7 @@ export default store;
 export * from './properties';
 export * from './currentSpot';
 export * from './latLng';
+export * from './barType';
+export * from './roomType';
+
+

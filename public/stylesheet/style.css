@@ -1,0 +1,36 @@
+.navbar-nav li {
+  margin-right: 3vh;
+}
+
+#bar-area h2 {
+  margin-bottom: 1vh;
+}
+
+#bar-area .navbar {
+  min-height: auto;
+  margin-bottom: 3vh;
+}
+
+.active {
+  background-color: orange;
+}
+
+#pie-area h2 {
+  margin-bottom: 1vh;
+}
+
+
+#pie-area .navbar {
+  min-height: auto;
+  height: 1.5em;
+  margin-bottom: 3vh;
+}
+
+#donut-area h2 {
+  margin-bottom: 1vh;
+}
+
+#donut-area .navbar {
+  min-height: auto;
+  margin-bottom: 3vh;
+}

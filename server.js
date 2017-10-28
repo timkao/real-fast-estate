@@ -6,6 +6,7 @@ const axios = require('axios');
 const apikey = '08ebe91ec661e3835a9a469936689b89';
 const router = require('./server/api/property');
 const bodyParser = require('body-parser');
+const db = require('./server/db');
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
@@ -54,6 +55,10 @@ app.use(function (err, req, res, next) {
   res.status(500).send('Something broke!')
 })
 
-app.listen(port, function(){
-  console.log(`listening on port ${3000}`);
+db.sync()
+.then(() => {
+  app.listen(port, function(){
+    console.log(`listening on port ${3000}`);
+  })
 })
+
