@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import store, { saveProperties, getBarType, getRoomType } from '../store';
+import store, { saveProperties, getBarType, getRoomType, getPathType } from '../store';
 import PieChart from './pieChart';
 import BarChart from './barChart';
 import DonutChart from './donutChart';
+import * as d3 from 'd3';
+
 
 // Massage All the data here
 class DashBoard extends Component {
@@ -20,7 +22,8 @@ class DashBoard extends Component {
         saleAmount: property.sale.amount.saleamt,
         saleDate: property.sale.amount.salerecdate,
         saleType: property.sale.amount.saletranstype,
-        type: property.summary.proptype
+        type: property.summary.proptype,
+        room: property.building.rooms.beds
       }
     })
     const thunk = saveProperties(slimResult, this.props.latLng);
@@ -28,7 +31,7 @@ class DashBoard extends Component {
   }
 
   render() {
-    const { properties, updateBarType, updateRoomType } = this.props;
+    const { properties, updateBarType, updateRoomType, updatePathType } = this.props;
 
     // since 2015 years
     const datelimit = '2015-12-31';
@@ -84,14 +87,28 @@ class DashBoard extends Component {
         return Date.parse(propertyA.sale.amount.salerecdate) - Date.parse(propertyB.sale.amount.salerecdate)
       })
     });
-    const bardata = []
-    const timeLabels = []
-    bardataObj[this.props.barType].forEach(property => {
-      if (property.sale.calculation.pricepersizeunit != 0) {
-        bardata.push(property.sale.calculation.pricepersizeunit);
-        timeLabels.push(property.sale.amount.salerecdate);
-      }
-    })
+
+    const bardata = [];
+    const timeLabels = [];
+    let barActiveDecider;
+    if (bardataObj[this.props.barType]) {
+      bardataObj[this.props.barType].forEach(property => {
+        if (property.sale.calculation.pricepersizeunit != 0) {
+          bardata.push(property.sale.calculation.pricepersizeunit);
+          timeLabels.push(property.sale.amount.salerecdate);
+        }
+      })
+      barActiveDecider = this.props.barType;
+    }
+    else if (barChoices.length !== 0) {
+      bardataObj[barChoices[0]].forEach(property => {
+        if (property.sale.calculation.pricepersizeunit != 0) {
+          bardata.push(property.sale.calculation.pricepersizeunit);
+          timeLabels.push(property.sale.amount.salerecdate);
+        }
+      })
+      barActiveDecider = barChoices[0];
+    }
     console.log('data for bar chart: ', bardata);
     console.log('barType', this.props.barType);
 
@@ -99,14 +116,22 @@ class DashBoard extends Component {
 
     // donut chart data -----------------------------------------
     const roomType = { "0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, ">5": 0 };
+    const donutChoices = properties.reduce(function (acc, property) {
+      const _proptype = property.summary.proptype;
+      if (_barChoices.includes(_proptype) && !acc.includes(_proptype)) {
+        acc.push(_proptype);
+      }
+      return acc;
+    }, [])
+    console.log('donut choices ', donutChoices);
     const _roomMap = properties.reduce(function (acc, property) {
       const currRoomType = `${property.building.rooms.beds}`;
       const proptype = property.summary.proptype;
-      if (barChoices.includes(proptype) && !acc[proptype]) {
+      if (_barChoices.includes(proptype) && !acc[proptype]) {
         acc[proptype] = Object.assign({}, roomType);
         acc[proptype][currRoomType] += 1;
       }
-      else if (barChoices.includes(proptype) && acc[proptype]) {
+      else if (_barChoices.includes(proptype) && acc[proptype]) {
         if (currRoomType * 1 > 5) {
           acc[proptype][">5"] += 1
         } else {
@@ -115,13 +140,83 @@ class DashBoard extends Component {
       }
       return acc;
     }, {})
-
+    let roomMap = {};
+    let donutActiveDecider;
     console.log('rooms types: ', _roomMap);
-    const roomMap = _roomMap[this.props.roomType];
+    if (_roomMap[this.props.roomType]) {
+      roomMap = _roomMap[this.props.roomType];
+      donutActiveDecider = this.props.roomType;
+    } else if (donutChoices.length !== 0) {
+      roomMap = _roomMap[donutChoices[0]];
+      donutActiveDecider = donutChoices[0];
+    }
+
     const donutLabels = Object.keys(roomMap);
     const donutdata = donutLabels.map(label => roomMap[label])
-
+    console.log('donut data: ', donutdata);
     // donut chart data -----------------------------------------
+
+    // linePath chart data --------------------------------------
+    const _properties = properties.filter(property => {
+      return property.sale.amount.saletranstype !== "Nominal - Non/Arms Length Sale" && property.sale.amount.saleamt > 5000;
+    })
+    const parseTime = d3.timeParse("%Y-%m-%d");
+    const _pathdata = _properties.map(property => {
+      return {
+        date: parseTime(property.sale.amount.salerecdate),
+        amount: property.sale.amount.saleamt,
+        type: property.summary.proptype,
+        room: property.building.rooms.beds
+      }
+    })
+    console.log(_pathdata);
+
+    const pathChoices = _properties.reduce(function (acc, property) {
+      const _proptype = property.summary.proptype;
+      if (_barChoices.includes(_proptype) && !acc.includes(_proptype)) {
+        acc.push(_proptype);
+      }
+      return acc;
+    }, [])
+    console.log('path choices', pathChoices);
+
+    const canvasWidth = 600;
+    const canvasHeight = 300;
+    const padding = 20;
+
+    const xScale = d3.scaleTime()
+      .domain([
+        d3.min(_pathdata, function (row) { return row.date }),
+        d3.max(_pathdata, function (row) { return row.date })
+      ])
+      .range([padding, canvasWidth]);
+
+    const yScale = d3.scaleLinear()
+      .domain([
+        d3.min(_pathdata, function (row) { return row.amount }),
+        d3.max(_pathdata, function (row) { return row.amount })
+      ])
+      .range([canvasHeight - padding, 0]);
+
+
+    const pathObj = _pathdata.reduce(function (acc, property) {
+      if (property.type !== undefined && acc[property.type] === undefined) {
+        acc[property.type] = [property];
+      } else if (property.type !== undefined) {
+        acc[property.type].push(property);
+      }
+      return acc;
+    }, {})
+    console.log(pathObj);
+    let pathdata = [];
+    if (pathChoices[this.props.pathType]) {
+      pathdata = pathObj[this.props.pathType];
+    } else {
+      pathdata = pathObj[pathChoices[0]];
+    }
+    console.log('path data: ', pathdata);
+
+    // linePath chart data --------------------------------------
 
     return (
       <div>
@@ -142,7 +237,7 @@ class DashBoard extends Component {
                 {
                   barChoices.map(type => {
                     return (
-                      <li key={type} onClick={() => { updateBarType(type) }} className={type === this.props.barType ? 'active' : 'inactive'} >{type}</li>
+                      <li key={type} onClick={() => { updateBarType(type) }} className={type === barActiveDecider ? 'active' : 'inactive'} >{type}</li>
                     )
                   })
                 }
@@ -158,18 +253,29 @@ class DashBoard extends Component {
             <nav className="navbar navbar-default">
               <ul className="nav navbar-nav">
                 {
-                  barChoices.map(type => {
+                  donutChoices.map(type => {
                     return (
-                      <li key={type} onClick={() => { updateRoomType(type) }} className={type === this.props.roomType ? 'active' : 'inactive'} >{type}</li>
+                      <li key={type} onClick={() => { updateRoomType(type) }} className={type === donutActiveDecider ? 'active' : 'inactive'} >{type}</li>
                     )
                   })
                 }
               </ul>
             </nav>
-            <DonutChart data={donutdata} labels={donutLabels} />
+            <DonutChart data={donutdata} labels={donutLabels} choices={donutChoices} />
           </div>
-          <div className="col-lg-7">
+          <div id="path-area" className="col-lg-7">
             <h2 className="lead">Total Sale Amount</h2>
+            <nav className="navbar navbar-default">
+              <ul className="nav navbar-nav">
+                {
+                  pathChoices.map(type => {
+                    return (
+                      <li key={type} onClick={() => { updatePathType(type) }} className={type === this.props.pathType ? 'active' : 'inactive'} >{type}</li>
+                    )
+                  })
+                }
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -184,7 +290,8 @@ const mapToState = (state) => {
     currentSpot: state.currentSpot,
     latLng: state.latLng,
     barType: state.barType,
-    roomType: state.roomType
+    roomType: state.roomType,
+    pathType: state.pathType
   }
 }
 
@@ -196,6 +303,10 @@ const mapToProps = (dispatch) => {
     },
     updateRoomType(type) {
       const action = getRoomType(type);
+      dispatch(action);
+    },
+    updatePathType(type) {
+      const action = getPathType(type);
       dispatch(action);
     }
   }

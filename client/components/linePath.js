@@ -23,9 +23,9 @@ class LineChart extends Component {
   }
 
   renderAxis() {
-    const canvasWidth = 600;
-    const canvasHeight = 300;
-    const padding = 20;
+    // const canvasWidth = 600;
+    // const canvasHeight = 300;
+    // const padding = 20;
 
     const dataset = this.state.data;
 
@@ -40,7 +40,7 @@ class LineChart extends Component {
                      .domain([300, d3.max(dataset, function(row){ return row.average})])
                      .range([canvasHeight - padding, 0]);
 
-    const formatTime = d3.timeFormat("%Y");
+    const formatTime = d3.timeFormat("%Y %b");
 
     const xAxis = d3.axisBottom()
                     .scale(xScale)

@@ -11,9 +11,6 @@
   margin-bottom: 3vh;
 }
 
-.active {
-  background-color: orange;
-}
 
 #pie-area h2 {
   margin-bottom: 1vh;
@@ -33,4 +30,17 @@
 #donut-area .navbar {
   min-height: auto;
   margin-bottom: 3vh;
+}
+
+#path-area h2 {
+  margin-bottom: 1vh;
+}
+
+#path-area .navbar {
+  min-height: auto;
+  margin-bottom: 3vh;
+}
+
+.active {
+  background-color: orange;
 }
