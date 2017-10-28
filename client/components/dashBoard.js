@@ -61,16 +61,19 @@ class DashBoard extends Component {
 
     // bar chart data -------------------------------------------
     const _barChoices = ['CONDOMINIUM', 'COOPERATIVE', 'SFR'];
+    const targetRecords = recentRecords.filter(property => {
+      return property.sale.calculation.pricepersizeunit != 0
+    })
 
-    const barChoices = recentRecords.reduce(function (acc, property) {
+    let barChoices = targetRecords.reduce(function (acc, property) {
       const _proptype = property.summary.proptype;
       if (_barChoices.includes(_proptype) && !acc.includes(_proptype)) {
         acc.push(_proptype);
       }
       return acc;
     }, [])
-    console.log('bar choices', barChoices);
-    const bardataObj = recentRecords.reduce(function (acc, property) {
+
+    const bardataObj = targetRecords.reduce(function (acc, property) {
       const proptype = property.summary.proptype;
       if (barChoices.includes(proptype)) {
         if (acc[proptype] === undefined) {
@@ -110,6 +113,11 @@ class DashBoard extends Component {
       })
       barActiveDecider = barChoices[0];
     }
+
+    const barAverage = Math.round(bardata.reduce(function (acc, num) { return acc + num }, 0) / bardata.length, 1);
+
+    console.log('raw bardata', bardataObj);
+    console.log('bar choices', barChoices);
     console.log('data for bar chart: ', bardata);
     console.log('barType', this.props.barType);
 
@@ -196,7 +204,7 @@ class DashBoard extends Component {
         d3.min(_pathdata, function (row) { return row.amount }),
         d3.max(_pathdata, function (row) { return row.amount })
       ])
-      .range([canvasHeight - padding, 0]);
+      .range([canvasHeight - padding, padding]);
 
 
     const pathObj = _pathdata.reduce(function (acc, property) {
@@ -253,7 +261,9 @@ class DashBoard extends Component {
                     )
                   })
                 }
-                <li className="navbar-right">Average: $XXX per Sqft</li>
+              </ul>
+              <ul id="bar-average" className="nav navbar-nav navbar-right">
+                <li>Average: <span id="average-number">{`  $${barAverage}`}</span></li>
               </ul>
             </nav>
             <BarChart data={bardata} labels={timeLabels} choices={barChoices} />
@@ -276,7 +286,7 @@ class DashBoard extends Component {
             <DonutChart data={donutdata} labels={donutLabels} choices={donutChoices} />
           </div>
           <div id="path-area" className="col-lg-7">
-            <h2 className="lead">Total Sale Amount</h2>
+            <h2 className="lead">Total Sale Amount (in thousands)</h2>
             <nav className="navbar navbar-default">
               <ul className="nav navbar-nav">
                 {

@@ -3,7 +3,7 @@ body {
 }
 
 .navbar-nav li {
-  margin-right: 3vh;
+  margin-left: 2vh;
 }
 
 #bar-area h2 {
@@ -74,4 +74,25 @@ body {
   padding-right: 1vh;
   color: white;
   font-family: 'ubuntu', sans-serif;
+}
+
+#bar-average li {
+  margin-left: 0;
+  margin-right: 3vh;
+}
+
+.axis path,
+.axis line {
+  stroke: darkgrey
+}
+
+.axis text {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: "14px";
+  fill: black;
+}
+
+#line-chart .line {
+  stroke-width: 2px;
 }

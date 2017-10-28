@@ -88,15 +88,35 @@ class LineChart extends Component {
       .y(function (row) { return yScale(row.amount) })
       .curve(d3.curveBasis);
 
-    let key = 0;
+    const colors = ['steelblue','#605A64', '#781011', '#2D261C'];
+    const lines = [zerobed, onebed, twobed, threebed];
+    const descriptions = ['Zero/No Record', '1 Bedroom', '2 Bedroom', '3 Bedroom'];
+    // legend
+
+    const reclength = "20"
 
     return (
       <div>
         <svg id="line-chart" width={canvasWidth} height={canvasHeight}>
-          <path className="line" d={line(zerobed)} stroke='black'></path>
-          <path className="line" d={line(onebed)} stroke='red'></path>
-          <path className="line" d={line(twobed)} stroke='blue'></path>
-          <path className="line" d={line(threebed)} stroke='green'></path>
+          {
+            lines.map( (bedtype, i) => {
+              return (
+                <g key={colors[i]}>
+                  <path className="line" d={line(bedtype)} stroke={colors[i]}></path>
+                  {
+                    bedtype.length !== 0 && <rect fill={colors[i]} x={padding + i * reclength * 1 + i * 120} y={0} width={reclength} height={reclength}></rect>
+                  }
+                  {
+                    bedtype.length !== 0 && <text fill={colors[i]} x={padding + i * reclength * 1 + reclength * 1.2 + i * 120} y={reclength * 0.8} fontSize="14px">{descriptions[i]}</text>
+                  }
+                </g>
+              )
+            })
+          }
+          {/* <path className="line" d={line(zerobed)} stroke='steelblue'></path>
+          <path className="line" d={line(onebed)} stroke='#605A64'></path>
+          <path className="line" d={line(twobed)} stroke='#781011'></path>
+          <path className="line" d={line(threebed)} stroke='#2D261C'></path> */}
           <g id="line-Xaxis" className="axis" transform={`translate(0, ${canvasHeight - padding} )`}></g>
           <g id="line-Yaxis" className="axis" transform={`translate(${padding}, 0)`}></g>
         </svg>

@@ -42,7 +42,7 @@ class PieChart extends Component {
               return (
                 <g key={i} className="arc" transform={`translate(${outerRadius}, ${outerRadius})`}>
                   <path fill={color[i]} d={arc(data)}></path>
-                  <text textAnchor="middle" transform={`translate(${arc.centroid(data)})`}>
+                  <text fontSize="18px" textAnchor="middle" transform={`translate(${arc.centroid(data)})`}>
                     {data.value}
                   </text>
                   {

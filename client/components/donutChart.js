@@ -75,7 +75,7 @@ class DonutChart extends Component {
               return (
                 <g key={i} className="arc" transform={`translate(${outerRadius}, ${outerRadius})`}>
                   <path fill={color[i]} d={arc(data)}></path>
-                  <text textAnchor="middle" transform={`translate(${arc.centroid(data)})`}>
+                  <text textAnchor="middle" transform={`translate(${arc.centroid(data)})`} fontSize="18px">
                     {data.value !== 0 && Math.floor(data.value)}
                   </text>
                   {

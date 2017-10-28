@@ -76,6 +76,12 @@ class BarChart extends Component {
     // fill
     const thresholdMax = d3.max(dataset);
     const threshold = this.state.rangeValue;
+    let barFont;
+    if (this.state.barData.length > 20) {
+      barFont = "8px";
+    } else {
+      barFont = "12px";
+    }
 
 
     let key = 0;
@@ -100,7 +106,7 @@ class BarChart extends Component {
             {
               dataset.map((data, index) => {
                 return (
-                  <text key={key++} textAnchor="middle" x={xScale(index) + xScale.bandwidth() / 2} y={canvasHeight - yScale(data) + 14} fill="white" fontSize="8px">
+                  <text key={key++} textAnchor="middle" x={xScale(index) + xScale.bandwidth() / 2} y={canvasHeight - yScale(data) + 14} fill="white" fontSize={barFont}>
                     {Math.floor(data)}
                   </text>
                 )
