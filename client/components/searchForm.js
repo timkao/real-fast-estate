@@ -29,16 +29,14 @@ class SearchForm extends Component {
 
   render() {
     return (
-      <div>
+      <div id="search-form">
         <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label>Location</label>
-            <input id="place-input" type="text" placeholder="Enter a location" className="form-control" autoComplete="off" name="location" />
-            <button className="btn btn-primary">Tap to Grab Property</button>
+          <div className="col-sm-6 col-sm-offset-3">
+            <input id="place-input" type="text" placeholder="Enter a location or Tab for current location" autoComplete="off" name="location" />
+            <button id="tap-button">Tap to Grab Property</button>
           </div>
         </form>
-        <Link to="/dashboard">To dashboard</Link>
-        </div>
+      </div>
     )
   }
 }
