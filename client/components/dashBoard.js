@@ -188,24 +188,9 @@ class DashBoard extends Component {
       return acc;
     }, [])
 
-    const canvasWidth = 600;
-    const canvasHeight = 300;
-    const padding = 40;
-
-    const xScale = d3.scaleTime()
-      .domain([
-        d3.min(_pathdata, function (row) { return row.date }),
-        d3.max(_pathdata, function (row) { return row.date })
-      ])
-      .range([padding, canvasWidth]);
-
-    const yScale = d3.scaleLinear()
-      .domain([
-        d3.min(_pathdata, function (row) { return row.amount }),
-        d3.max(_pathdata, function (row) { return row.amount })
-      ])
-      .range([canvasHeight - padding, padding]);
-
+    // const canvasWidth = 600;
+    // const canvasHeight = 300;
+    // const padding = 40;
 
     const pathObj = _pathdata.reduce(function (acc, property) {
       if (property.type !== undefined && acc[property.type] === undefined) {
@@ -235,6 +220,20 @@ class DashBoard extends Component {
     pathdata = pathdata.filter(data => data.date > 0);
     console.log('path choices', pathChoices);
     console.log('path data: ', pathdata);
+
+  //   const xScale = d3.scaleTime()
+  //   .domain([
+  //     d3.min(pathdata, function (row) { return row.date }),
+  //     d3.max(pathdata, function (row) { return row.date })
+  //   ])
+  //   .range([padding, canvasWidth]);
+
+  // const yScale = d3.scaleLinear()
+  //   .domain([
+  //     d3.min(pathdata, function (row) { return row.amount }),
+  //     d3.max(pathdata, function (row) { return row.amount })
+  //   ])
+  //   .range([canvasHeight - padding, padding]);
 
     // linePath chart data --------------------------------------
 
@@ -298,7 +297,7 @@ class DashBoard extends Component {
                 }
               </ul>
             </nav>
-            <LinePath data={pathdata} xScale={xScale} yScale={yScale} canvasHeight={canvasHeight} canvasWidth={canvasWidth} padding={padding} />
+            <LinePath data={pathdata} type={this.props.pathType} />
           </div>
         </div>
       </div>

@@ -117,7 +117,7 @@ body {
 }
 
 #search-form {
-  margin-top: 10em;
+  margin-top: 10vh;
 }
 
 #place-input {
@@ -127,5 +127,5 @@ body {
   border-top: none;
   border-bottom: solid;
   height: 4vh;
-  font-size: 1.5em;
+  font-size: 2vh;
 }

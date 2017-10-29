@@ -5,7 +5,7 @@ const Property = require('../db').models.Property;
 
 
 router.post('/property', (req, res, next) => {
-  const radius = 0.1;
+  const radius = 0.2;
   // const propertyType = 'CONDOMINIUM';
   const orderby = 'distance';
   const page = 1;
@@ -27,7 +27,7 @@ router.post('/property', (req, res, next) => {
 })
 
 router.post('/property/sales', (req, res, next) => {
-  const radius = 0.1;
+  const radius = 0.2;
   // const propertyType = 'CONDOMINIUM';
   const orderby = 'distance';
   const page = 1;
@@ -49,7 +49,7 @@ router.post('/property/sales', (req, res, next) => {
 })
 
 router.post('/property/address', (req, res, next) => {
-  const radius = 0.1;
+  const radius = 0.2;
   // const propertyType = 'CONDOMINIUM';
   const orderby = 'distance';
   const page = 1;

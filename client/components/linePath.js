@@ -21,6 +21,7 @@ class LineChart extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (!lodash.isEqual(nextProps.data, this.props.data) || nextProps.data.length !== this.state.transitionData.length) {
+      if (this.props.type !== nextProps.type) {
       const newData = nextProps.data;
       d3.selectAll(".line").transition().duration(1000).ease(d3.easeLinear).tween("attr.scale", () => {
         const interpolator = d3.interpolateNumber(0, newData.length);
@@ -31,16 +32,39 @@ class LineChart extends Component {
       })
     }
   }
+  }
 
   renderAxis() {
 
-    const { xScale, yScale } = this.props;
+    // const { xScale, yScale } = this.props;
+    const canvasWidth = 600;
+    const canvasHeight = 300;
+    const padding = 40;
+    let dataset = [];
+    if (this.state.transitionData.length > 0) {
+      dataset = this.state.transitionData;
+    } else {
+      dataset = this.state.data;
+    }
+    const xScale = d3.scaleTime()
+    .domain([
+      d3.min(dataset, function (row) { return row.date }),
+      d3.max(dataset, function (row) { return row.date })
+    ])
+    .range([padding, canvasWidth]);
 
+  const yScale = d3.scaleLinear()
+    .domain([
+      d3.min(dataset, function (row) { return row.amount }),
+      d3.max(dataset, function (row) { return row.amount })
+    ])
+    .range([canvasHeight - padding, padding]);
     const formatTime = d3.timeFormat("%Y %b");
 
     const xAxis = d3.axisBottom()
       .scale(xScale)
-      .tickFormat(formatTime);
+      .tickFormat(formatTime)
+      .ticks(6);
 
     const yAxis = d3.axisLeft()
       .scale(yScale)
@@ -51,19 +75,34 @@ class LineChart extends Component {
 
 
   render() {
-    const { xScale, yScale, canvasHeight, canvasWidth, padding } = this.props;
+    // const { xScale, yScale, canvasHeight, canvasWidth, padding } = this.props;
 
     // data
     // const dataset = this.state.data;
 
     // tranistion
+    const canvasWidth = 600;
+    const canvasHeight = 300;
+    const padding = 40;
     let dataset = [];
     if (this.state.transitionData.length > 0) {
       dataset = this.state.transitionData;
     } else {
       dataset = this.state.data;
     }
+    const xScale = d3.scaleTime()
+    .domain([
+      d3.min(dataset, function (row) { return row.date }),
+      d3.max(dataset, function (row) { return row.date })
+    ])
+    .range([padding, canvasWidth]);
 
+  const yScale = d3.scaleLinear()
+    .domain([
+      d3.min(dataset, function (row) { return row.amount }),
+      d3.max(dataset, function (row) { return row.amount })
+    ])
+    .range([canvasHeight - padding, padding]);
     let onebed = [];
     let twobed = [];
     let threebed = [];
