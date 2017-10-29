@@ -19,7 +19,7 @@ class PieChart extends Component {
     const dataset = this.state.pieData;
     const pie = d3.pie().padAngle(0.06);
     // var color = d3.scaleOrdinal(d3.schemeCategory10);
-    const color = ['#CB9190', '#BCCDDF', '#8F613F', '#5AA6A2', '#B3986B', '#797367'];
+    const color = ['#CB9190', '#BCCDDF', '#8F613F', '#5AA6A2', '#B3986B', '#797367', '#DC9C6E', '#6B3E65', '#A1213A'];
     const pieDataset = pie(dataset);
 
     // scale

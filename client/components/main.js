@@ -15,8 +15,8 @@ class Main extends Component {
     return (
       <div className="container">
         <Switch>
-          <Route exact path="/" component={SearchForm} />
           <Route exact path="/dashboard" component={DashBoard} />
+          <Route exact path="/" component={SearchForm} />
         </Switch>
       </div>
     )

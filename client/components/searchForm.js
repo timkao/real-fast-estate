@@ -8,14 +8,15 @@ import store, {
   fetchLatLngAndProperty,
   fetchAddressByLatLng
 } from '../store';
-import { Link } from 'react-router-dom';
-
+import { Route } from 'react-router-dom';
+import LoadIndicator from './loadIndicator';
 
 class SearchForm extends Component {
 
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {showLoading: false};
   }
 
   componentDidMount() {
@@ -24,6 +25,7 @@ class SearchForm extends Component {
   }
 
   handleSubmit(evt) {
+    this.setState({showLoading: true});
     this.props.toDashBoard(evt, this.props.currentSpot, this.props.latLng);
   }
 
@@ -36,6 +38,13 @@ class SearchForm extends Component {
             <button id="tap-button">Tap to Grab Property</button>
           </div>
         </form>
+        {
+          this.state.showLoading && <div className='waiting'>
+            <p className='spinner'>
+              Loading...
+          </p>
+          </div>
+        }
       </div>
     )
   }
