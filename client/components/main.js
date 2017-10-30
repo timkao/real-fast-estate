@@ -18,7 +18,7 @@ class Main extends Component {
         <Switch>
           <Route exact path="/dashboard" component={DashBoard} />
           <Route exact path="/" component={SearchForm} />
-          <Route exact path="/property/:lat/:lng/:address" component={SingleProperty} />
+          <Route exact path="/property/:lat/:lng/:propId" component={SingleProperty} />
         </Switch>
       </div>
     )

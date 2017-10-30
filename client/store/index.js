@@ -8,6 +8,7 @@ import latLng from './latLng';
 import barType from './barType';
 import roomType from './roomType';
 import pathType from './pathType';
+import currentProperty from './currentProperty';
 
 const reducer = combineReducers({
   properties,
@@ -15,7 +16,8 @@ const reducer = combineReducers({
   latLng,
   barType,
   roomType,
-  pathType
+  pathType,
+  currentProperty
 });
 
 const store = createStore(
@@ -34,4 +36,5 @@ export * from './latLng';
 export * from './barType';
 export * from './roomType';
 export * from './pathType';
+export * from './currentProperty';
 

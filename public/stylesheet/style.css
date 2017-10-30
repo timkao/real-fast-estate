@@ -152,6 +152,18 @@ div.waiting .spinner {
 }
 
 #map {
-  width: 400px;
-  height: 400px;
+  width: 550px;
+  height: 450px;
 }
+
+#single-property-page h2 {
+  font-family: 'ubuntu', sans-serif;
+  margin-bottom: 1vh;
+}
+
+#single-property-page .navbar {
+  min-height: auto;
+  height: 1.5em;
+  margin-bottom: 2vh;
+}
+

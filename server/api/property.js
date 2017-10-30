@@ -78,6 +78,22 @@ router.post('/property/save', (req, res, next) => {
   .catch(next);
 })
 
+router.post('/property/history', (req, res, next) => {
+  const id = req.body.id;
+
+  axios.get(`https://search.onboard-apis.com/propertyapi/v1.0.0/saleshistory/snapshot?id=${id}`, {
+    headers: {
+      'Accept': 'application/json',
+      'apikey': apikey
+    }
+  })
+  .then( result => result.data )
+  .then( data => {
+    res.send(data);
+  })
+  .catch(next);
+})
+
 router.get('/property', (req, res, next) => {
   res.send('property api linked!');
 })

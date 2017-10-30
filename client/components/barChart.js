@@ -13,6 +13,7 @@ class BarChart extends Component {
       labels: this.props.labels,
       positions: this.props.positions,
       addresses: this.props.addresses,
+      id: this.props.id,
       rangeValue: 0
     }
   }
@@ -24,6 +25,7 @@ class BarChart extends Component {
     const newLabels = nextProps.labels;
     const newPositions = nextProps.positions;
     const newAddresses = nextProps.addresses;
+    const newId = nextProps.id;
 
     d3.selectAll("rect").transition().tween("attr.scale", null);
     d3.selectAll("rect").transition().duration(1000).ease(d3.easeLinear).tween("attr.scale", () => {
@@ -43,7 +45,8 @@ class BarChart extends Component {
           barData: newArr,
           labels: newLabels,
           positions: newPositions,
-          addresses: newAddresses
+          addresses: newAddresses,
+          id: newId
         });
       }
     })
@@ -102,7 +105,7 @@ class BarChart extends Component {
             {
               dataset.map((data, index) => {
                 return (
-                  <Link key={key++} to={`/property/${this.state.positions[index][0]}/${this.state.positions[index][1]}/${this.state.addresses[index]}`}><rect x={xScale(index)} y={canvasHeight - yScale(data)} width={xScale.bandwidth()} height={yScale(data)} fill={ data > threshold ? `#605A64` : "#781011" } className="bar-chart-rect">
+                  <Link key={key++} to={`/property/${this.state.positions[index][0]}/${this.state.positions[index][1]}/${this.state.id[index]}`}><rect x={xScale(index)} y={canvasHeight - yScale(data)} width={xScale.bandwidth()} height={yScale(data)} fill={ data > threshold ? `#605A64` : "#781011" } className="bar-chart-rect">
                   </rect></Link>
                 )
               })

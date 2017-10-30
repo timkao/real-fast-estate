@@ -100,6 +100,7 @@ class DashBoard extends Component {
     const timeLabels = [];
     const geoPositions = [];
     const addresses = [];
+    const propIds = [];
     let barActiveDecider;
     if (bardataObj[this.props.barType]) {
       bardataObj[this.props.barType].forEach(property => {
@@ -108,6 +109,7 @@ class DashBoard extends Component {
           timeLabels.push(property.sale.amount.salerecdate);
           geoPositions.push([property.location.latitude, property.location.longitude]);
           addresses.push(property.address.oneLine);
+          propIds.push(property.identifier.obPropId);
         }
       })
       barActiveDecider = this.props.barType;
@@ -273,7 +275,7 @@ class DashBoard extends Component {
                 <li>Average: <span id="average-number">{`  $${barAverage}`}</span></li>
               </ul>
             </nav>
-            <BarChart data={bardata} labels={timeLabels} choices={barChoices} positions={geoPositions} addresses={addresses} />
+            <BarChart data={bardata} labels={timeLabels} choices={barChoices} positions={geoPositions} addresses={addresses} id={propIds} />
           </div>
         </div>
         <div className="row">

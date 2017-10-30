@@ -1,8 +1,7 @@
-function Map(id, lat, lng, address){
+function Map(id, lat, lng){
   this.id = id;
   this.lat = lat;
   this.lng = lng;
-  this.address = address;
   this.init();
 }
 
@@ -11,7 +10,7 @@ Map.prototype.init = function(){
   // set the map options hash
   var mapOptions = {
       center: myLatlng,
-      zoom: 17,
+      zoom: 16,
       mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   // get the maps div's HTML obj
@@ -21,7 +20,7 @@ Map.prototype.init = function(){
   // Add the marker to the map
   var marker = new google.maps.Marker({
       position: myLatlng,
-      title: this.address
+      title: 'Hello World'
   });
   //Add the marker to the map by calling setMap()
   marker.setMap(this.targetMap);
