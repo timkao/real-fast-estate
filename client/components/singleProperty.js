@@ -24,15 +24,16 @@ class SingleProperty extends Component {
     const parseTime = d3.timeParse("%Y-%m-%d");
     let address;
     let historydata = [];
+    let currentProperty;
     if (this.props.currentProperty.property) {
-      const currentProperty = this.props.currentProperty.property[0];
+      currentProperty = this.props.currentProperty.property[0];
       address = currentProperty.address.oneLine;
       historydata = currentProperty.salehistory.map(history => {
         return {
           date: parseTime(history.amount.salerecdate),
           amount: history.amount.saleamt
         }
-      }).filter( row => row.amount !== 0);
+      }).filter(row => row.amount !== 0);
     }
 
     return (
@@ -53,7 +54,37 @@ class SingleProperty extends Component {
             }
           </div>
         </div>
-        <Link to="/dashboard"><p>Go back</p></Link>
+        {
+          historydata.length !== 0 && <div className="row detail">
+            <ul className="list-group">
+              <li className="list-group-item">
+                <div className="row">
+                  <div className="col-sm-3">Year Built:</div>
+                  <div className="col-sm-3">{currentProperty.summary.yearbuilt}</div>
+                  <div className="col-sm-3">Property Type:</div>
+                  <div className="col-sm-3">{currentProperty.summary.proptype}</div>
+                </div>
+              </li>
+              <li className="list-group-item">
+                <div className="row">
+                  <div className="col-sm-3">Total Square Feet:</div>
+                  <div className="col-sm-3">{currentProperty.building.size.universalsize}</div>
+                  <div className="col-sm-3">Number of Bed</div>
+                  <div className="col-sm-3">{currentProperty.building.rooms.beds}</div>
+                </div>
+              </li>
+              <li className="list-group-item">
+                <div className="row">
+                  <div className="col-sm-3">Address:</div>
+                  <div className="col-sm-3">{`${currentProperty.address.line1}, ${currentProperty.address.locality}, ${currentProperty.address.countrySubd}`}</div>
+                  <div className="col-sm-3">Zip Code:</div>
+                  <div className="col-sm-3">{currentProperty.address.postal1}</div>
+                </div>
+              </li>
+            </ul>
+            <Link to="/dashboard"><p>Go back</p></Link>
+          </div>
+        }
       </div>
     )
   }

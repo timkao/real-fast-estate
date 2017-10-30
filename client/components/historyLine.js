@@ -86,27 +86,32 @@ class HistoryLine extends Component {
     return (
       <div>
         <svg id="historyline-chart" width={canvasWidth} height={canvasHeight}>
+          <clipPath id="scatter-area">
+            <rect x={padding} y={0} width={canvasWidth} height={canvasHeight - padding}></rect>
+          </clipPath>
+          <g clipPath="url(#scatter-area)">
           {
             dataset.map( point => {
               return (
-                <circle cx={xScale(point.date)} cy={yScale(point.amount)} r={3} fill="#605A64"></circle>
+                <circle key={point.date} cx={xScale(point.date)} cy={yScale(point.amount)} r={3} fill="#781011"></circle>
               )
             })
           }
           {
             dataset.map( point => {
               return (
-                <text x={xScale(point.date) - 50} y={yScale(point.amount) + 20} stroke="#605A64">{d3.format(',')(point.amount)}</text>
+                <text key={point.date} x={xScale(point.date) - 50} y={yScale(point.amount) + 20} stroke="#6795AF">{d3.format(',')(point.amount)}</text>
               )
             })
           }
           {
             dataset.map( point => {
               return (
-                <text x={xScale(point.date) - 50} y={yScale(point.amount) + 40} stroke="#605A64">{formatTime(point.date)}</text>
+                <text key={point.date} x={xScale(point.date) - 50} y={yScale(point.amount) + 40} stroke="#6795AF">{formatTime(point.date)}</text>
               )
             })
           }
+          </g>
           <g id="historyline-Xaxis" className="axis" transform={`translate(0, ${canvasHeight - padding} )`}></g>
           <g id="historyline-Yaxis" className="axis" transform={`translate(${padding}, 0)`}></g>
         </svg>
