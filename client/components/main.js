@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import SearchForm from './searchForm';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import DashBoard from './dashBoard';
+import SingleProperty from './singleProperty';
 
 
 class Main extends Component {
@@ -17,6 +18,7 @@ class Main extends Component {
         <Switch>
           <Route exact path="/dashboard" component={DashBoard} />
           <Route exact path="/" component={SearchForm} />
+          <Route exact path="/property/:lat/:lng/:address" component={SingleProperty} />
         </Switch>
       </div>
     )

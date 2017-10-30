@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class BarChart extends Component {
 
@@ -10,6 +11,8 @@ class BarChart extends Component {
     this.state = {
       barData: this.props.data,
       labels: this.props.labels,
+      positions: this.props.positions,
+      addresses: this.props.addresses,
       rangeValue: 0
     }
   }
@@ -19,6 +22,8 @@ class BarChart extends Component {
     const begin = this.props.data;
     const end = nextProps.data;
     const newLabels = nextProps.labels;
+    const newPositions = nextProps.positions;
+    const newAddresses = nextProps.addresses;
 
     d3.selectAll("rect").transition().tween("attr.scale", null);
     d3.selectAll("rect").transition().duration(1000).ease(d3.easeLinear).tween("attr.scale", () => {
@@ -36,14 +41,15 @@ class BarChart extends Component {
         })
         this.setState({
           barData: newArr,
-          labels: newLabels
+          labels: newLabels,
+          positions: newPositions,
+          addresses: newAddresses
         });
       }
     })
   }
 
   handleChange(evt) {
-    const threshold = evt.target.value;
     this.setState({rangeValue: evt.target.value});
   }
 
@@ -82,8 +88,6 @@ class BarChart extends Component {
     } else {
       barFont = "12px";
     }
-
-
     let key = 0;
 
     return (
@@ -98,8 +102,8 @@ class BarChart extends Component {
             {
               dataset.map((data, index) => {
                 return (
-                  <rect key={key++} x={xScale(index)} y={canvasHeight - yScale(data)} width={xScale.bandwidth()} height={yScale(data)} fill={ data > threshold ? `#605A64` : "#781011" } className="bar-chart-rect">
-                  </rect>
+                  <Link key={key++} to={`/property/${this.state.positions[index][0]}/${this.state.positions[index][1]}/${this.state.addresses[index]}`}><rect x={xScale(index)} y={canvasHeight - yScale(data)} width={xScale.bandwidth()} height={yScale(data)} fill={ data > threshold ? `#605A64` : "#781011" } className="bar-chart-rect">
+                  </rect></Link>
                 )
               })
             }

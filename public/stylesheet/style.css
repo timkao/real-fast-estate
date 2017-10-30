@@ -81,6 +81,10 @@ body {
   margin-right: 3vh;
 }
 
+.navbar-default li:hover {
+  cursor: pointer;
+}
+
 .axis path,
 .axis line {
   stroke: darkgrey
@@ -145,4 +149,9 @@ div.waiting .spinner {
   left: 45%;
   top: 70%;
   position: relative;
+}
+
+#map {
+  width: 400px;
+  height: 400px;
 }

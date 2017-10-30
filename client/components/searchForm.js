@@ -9,7 +9,6 @@ import store, {
   fetchAddressByLatLng
 } from '../store';
 import { Route } from 'react-router-dom';
-import LoadIndicator from './loadIndicator';
 
 class SearchForm extends Component {
 

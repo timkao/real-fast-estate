@@ -24,7 +24,11 @@ class DashBoard extends Component {
         saleDate: property.sale.amount.salerecdate,
         saleType: property.sale.amount.saletranstype,
         type: property.summary.proptype,
-        room: property.building.rooms.beds
+        room: property.building.rooms.beds,
+        propId: property.identifier.obPropId,
+        perSqft: property.sale.calculation.pricepersizeunit,
+        latitude: property.location.latitude,
+        longtitude: property.location.longtitude
       }
     })
     const thunk = saveProperties(slimResult, this.props.latLng);
@@ -94,12 +98,16 @@ class DashBoard extends Component {
 
     const bardata = [];
     const timeLabels = [];
+    const geoPositions = [];
+    const addresses = [];
     let barActiveDecider;
     if (bardataObj[this.props.barType]) {
       bardataObj[this.props.barType].forEach(property => {
         if (property.sale.calculation.pricepersizeunit != 0) {
           bardata.push(property.sale.calculation.pricepersizeunit);
           timeLabels.push(property.sale.amount.salerecdate);
+          geoPositions.push([property.location.latitude, property.location.longitude]);
+          addresses.push(property.address.oneLine);
         }
       })
       barActiveDecider = this.props.barType;
@@ -265,7 +273,7 @@ class DashBoard extends Component {
                 <li>Average: <span id="average-number">{`  $${barAverage}`}</span></li>
               </ul>
             </nav>
-            <BarChart data={bardata} labels={timeLabels} choices={barChoices} />
+            <BarChart data={bardata} labels={timeLabels} choices={barChoices} positions={geoPositions} addresses={addresses} />
           </div>
         </div>
         <div className="row">
