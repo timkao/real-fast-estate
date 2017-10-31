@@ -164,9 +164,18 @@ div.waiting .spinner {
 #single-property-page .navbar {
   min-height: auto;
   height: 1.5em;
-  margin-bottom: 2vh;
 }
 
 #single-property-page .detail {
   margin-top: 2vh;
+}
+
+#bar-area .glyphicon-home {
+  font-size: 24px;
+  color: #6795AF
+}
+
+#to-dashboard {
+  font-size: 18px;
+  color: #6795AF
 }

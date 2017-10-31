@@ -6,6 +6,7 @@ import BarChart from './barChart';
 import DonutChart from './donutChart';
 import * as d3 from 'd3';
 import LinePath from './linePath';
+import { Link } from 'react-router-dom';
 
 
 // Massage All the data here
@@ -260,7 +261,7 @@ class DashBoard extends Component {
             <PieChart data={piedata} labels={pieLabels} />
           </div>
           <div id="bar-area" className="col-lg-7">
-            <h2 className="lead">Per Square Feet Price</h2>
+            <h2 className="lead">Per Square Feet Price<Link to="/"><span className="pull-right"><i className="glyphicon glyphicon-home"></i></span></Link></h2>
             <nav className="navbar navbar-default">
               <ul className="nav navbar-nav">
                 {
