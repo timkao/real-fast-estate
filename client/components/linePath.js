@@ -130,8 +130,6 @@ class LineChart extends Component {
     const colors = ['steelblue','#605A64', '#781011', '#2D261C'];
     const lines = [zerobed, onebed, twobed, threebed];
     const descriptions = ['Zero/No Record', '1 Bedroom', '2 Bedroom', '3 Bedroom'];
-    // legend
-
     const reclength = "20"
 
     return (

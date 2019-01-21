@@ -12,11 +12,7 @@ import { Link } from 'react-router-dom';
 // Massage All the data here
 class DashBoard extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
-  componentWillMount() {
+  componentDidMount() { // why do i did componentWillMount??
     const slimResult = this.props.properties.map(property => {
       return {
         address: property.address.oneLine,
@@ -38,12 +34,10 @@ class DashBoard extends Component {
 
   render() {
     const { properties, updateBarType, updateRoomType, updatePathType } = this.props;
-    console.log('properties', properties)
 
     const recentRecords = properties.filter(property => {
       return property.sale.amount.saletranstype !== "Nominal - Non/Arms Length Sale";
     })
-    console.log('recentRecords: ', recentRecords);
 
     // pie chart data -------------------------------------------
     const typeMap = properties.reduce(function (acc, property) {
@@ -60,7 +54,6 @@ class DashBoard extends Component {
     }, {})
     const pieLabels = Object.keys(typeMap);
     const piedata = pieLabels.map(label => typeMap[label])
-    console.log('data for pie chart: ', piedata);
     // pie chart data -------------------------------------------
 
     // bar chart data -------------------------------------------
@@ -126,11 +119,6 @@ class DashBoard extends Component {
 
     const barAverage = Math.round(bardata.reduce(function (acc, num) { return acc + num }, 0) / bardata.length, 1);
 
-    console.log('raw bardata', bardataObj);
-    console.log('bar choices', barChoices);
-    console.log('data for bar chart: ', bardata);
-    console.log('barType', this.props.barType);
-
     // bar chart data -------------------------------------------
 
     // donut chart data -----------------------------------------
@@ -142,7 +130,6 @@ class DashBoard extends Component {
       }
       return acc;
     }, [])
-    console.log('donut choices ', donutChoices);
     const _roomMap = properties.reduce(function (acc, property) {
       const currRoomType = `${property.building.rooms.beds}`;
       const proptype = property.summary.proptype;
@@ -161,7 +148,6 @@ class DashBoard extends Component {
     }, {})
     let roomMap = {};
     let donutActiveDecider;
-    console.log('rooms types: ', _roomMap);
     if (_roomMap[this.props.roomType]) {
       roomMap = _roomMap[this.props.roomType];
       donutActiveDecider = this.props.roomType;
@@ -172,7 +158,6 @@ class DashBoard extends Component {
 
     const donutLabels = Object.keys(roomMap);
     const donutdata = donutLabels.map(label => roomMap[label])
-    console.log('donut data: ', donutdata);
     // donut chart data -----------------------------------------
 
     // linePath chart data --------------------------------------
@@ -188,7 +173,6 @@ class DashBoard extends Component {
         room: property.building.rooms.beds
       }
     })
-    console.log(_pathdata);
 
     const pathChoices = _properties.reduce(function (acc, property) {
       const _proptype = property.summary.proptype;
@@ -198,10 +182,6 @@ class DashBoard extends Component {
       return acc;
     }, [])
 
-    // const canvasWidth = 600;
-    // const canvasHeight = 300;
-    // const padding = 40;
-
     const pathObj = _pathdata.reduce(function (acc, property) {
       if (property.type !== undefined && acc[property.type] === undefined) {
         acc[property.type] = [property];
@@ -210,14 +190,10 @@ class DashBoard extends Component {
       }
       return acc;
     }, {})
-    console.log(pathObj);
     let pathdata = [];
     if (pathChoices.includes(this.props.pathType)) {
-      console.log('---------------------')
-      console.log(this.props.pathType);
       pathdata = pathObj[this.props.pathType];
     } else if (pathChoices.length !== 0) {
-      console.log('xxxxxxxxxxxxxxxxxxxxx');
       pathdata = pathObj[pathChoices[0]];
     } else {
       pathdata = [];
@@ -228,23 +204,6 @@ class DashBoard extends Component {
       })
     }
     pathdata = pathdata.filter(data => data.date > 0);
-    console.log('path choices', pathChoices);
-    console.log('path data: ', pathdata);
-
-  //   const xScale = d3.scaleTime()
-  //   .domain([
-  //     d3.min(pathdata, function (row) { return row.date }),
-  //     d3.max(pathdata, function (row) { return row.date })
-  //   ])
-  //   .range([padding, canvasWidth]);
-
-  // const yScale = d3.scaleLinear()
-  //   .domain([
-  //     d3.min(pathdata, function (row) { return row.amount }),
-  //     d3.max(pathdata, function (row) { return row.amount })
-  //   ])
-  //   .range([canvasHeight - padding, padding]);
-
     // linePath chart data --------------------------------------
 
     return (

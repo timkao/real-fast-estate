@@ -52,7 +52,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 2
         }
       },
       "vintage": {
@@ -120,7 +120,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 2
         }
       },
       "vintage": {
@@ -189,7 +189,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 1
         }
       },
       "vintage": {
@@ -257,7 +257,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 1
         }
       },
       "vintage": {
@@ -325,7 +325,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 1
         }
       },
       "vintage": {
@@ -393,7 +393,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 2
         }
       },
       "vintage": {
@@ -429,12 +429,12 @@
       },
       "address": {
         "country": "US",
-        "countrySubd": "NY",
-        "line1": "70 WASHINGTON ST APT 11I",
-        "line2": "BROOKLYN, NY 11201",
+        "countrySubd": "NJ",
+        "line1": "803 SIP ST APT 301",
+        "line2": "UNION CITY, NJ 07087",
         "locality": "Brooklyn",
         "matchCode": "ExaStr",
-        "oneLine": "70 WASHINGTON ST APT 11I, BROOKLYN, NY 11201",
+        "oneLine": "803 SIP ST APT 301, UNION CITY, NJ 07087",
         "postal1": "11201",
         "postal2": "1480",
         "postal3": "C018"
@@ -461,7 +461,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 3
         }
       },
       "vintage": {
@@ -529,7 +529,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 2
         }
       },
       "vintage": {
@@ -540,7 +540,7 @@
         "salesearchdate": "2011-5-13",
         "saleTransDate": "2011-5-13",
         "amount": {
-          "saleamt": 0,
+          "saleamt": 1450000,
           "salerecdate": "2011-11-9",
           "saledisclosuretype": 0,
           "saledocnum": "0000391407",
@@ -597,7 +597,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 1
         }
       },
       "vintage": {
@@ -665,7 +665,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 2
         }
       },
       "vintage": {
@@ -733,7 +733,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 4
         }
       },
       "vintage": {
@@ -801,7 +801,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 3
         }
       },
       "vintage": {
@@ -809,11 +809,11 @@
         "pubDate": "2018-3-1"
       },
       "sale": {
-        "salesearchdate": "2016-9-12",
-        "saleTransDate": "2016-9-12",
+        "salesearchdate": "2015-9-12",
+        "saleTransDate": "2015-9-12",
         "amount": {
-          "saleamt": 0,
-          "salerecdate": "2016-10-4",
+          "saleamt": 976511,
+          "salerecdate": "2015-9-12",
           "saledisclosuretype": 0,
           "saledocnum": "0000349204",
           "saletranstype": "Resale"
@@ -869,7 +869,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 3
         }
       },
       "vintage": {
@@ -877,11 +877,11 @@
         "pubDate": "2018-3-1"
       },
       "sale": {
-        "salesearchdate": "2016-4-20",
-        "saleTransDate": "2016-4-20",
+        "salesearchdate": "2014-4-20",
+        "saleTransDate": "2014-4-20",
         "amount": {
           "saleamt": 1020000,
-          "salerecdate": "2016-5-3",
+          "salerecdate": "2014-5-3",
           "saledisclosuretype": 0,
           "saledocnum": "0000151687",
           "saletranstype": "Resale"
@@ -937,7 +937,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 2
         }
       },
       "vintage": {
@@ -1005,7 +1005,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 2
         }
       },
       "vintage": {
@@ -1016,7 +1016,7 @@
         "salesearchdate": "2006-3-22",
         "saleTransDate": "2006-3-22",
         "amount": {
-          "saleamt": 0,
+          "saleamt": 1185000,
           "salerecdate": "2006-5-4",
           "saledisclosuretype": 0,
           "saledocnum": "0000250462",
@@ -1084,7 +1084,7 @@
         "salesearchdate": "2013-9-11",
         "saleTransDate": "2013-9-11",
         "amount": {
-          "saleamt": 0,
+          "saleamt": 345900,
           "salerecdate": "2014-3-20",
           "saledisclosuretype": 0,
           "saledocnum": "0000096735",
@@ -1141,7 +1141,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 3
         }
       },
       "vintage": {
@@ -1149,11 +1149,11 @@
         "pubDate": "2018-3-1"
       },
       "sale": {
-        "salesearchdate": "2007-1-10",
-        "saleTransDate": "2007-1-10",
+        "salesearchdate": "2013-1-10",
+        "saleTransDate": "2013-1-10",
         "amount": {
           "saleamt": 85000,
-          "salerecdate": "2007-4-12",
+          "salerecdate": "2013-4-12",
           "saledisclosuretype": 0,
           "saledocnum": "0000188487",
           "saletranstype": "Resale"
@@ -1209,7 +1209,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 2
         }
       },
       "vintage": {
@@ -1217,11 +1217,11 @@
         "pubDate": "2018-3-1"
       },
       "sale": {
-        "salesearchdate": "2009-5-5",
-        "saleTransDate": "2009-5-5",
+        "salesearchdate": "2011-5-5",
+        "saleTransDate": "2011-5-5",
         "amount": {
           "saleamt": 960000,
-          "salerecdate": "2009-5-15",
+          "salerecdate": "2011-5-15",
           "saledisclosuretype": 0,
           "saledocnum": "0000146344",
           "saletranstype": "Resale"
@@ -1277,7 +1277,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 4
         }
       },
       "vintage": {
@@ -1285,11 +1285,11 @@
         "pubDate": "2018-3-8"
       },
       "sale": {
-        "salesearchdate": "2018-1-19",
-        "saleTransDate": "2018-1-19",
+        "salesearchdate": "2015-1-19",
+        "saleTransDate": "2015-1-19",
         "amount": {
           "saleamt": 1200000,
-          "salerecdate": "2018-1-26",
+          "salerecdate": "2015-1-26",
           "saledisclosuretype": 0,
           "saledocnum": "0000032349",
           "saletranstype": "Resale"
@@ -1345,7 +1345,7 @@
         },
         "rooms": {
           "bathstotal": 0,
-          "beds": 0
+          "beds": 3
         }
       },
       "vintage": {
@@ -1353,10 +1353,10 @@
         "pubDate": "2018-3-1"
       },
       "sale": {
-        "salesearchdate": "2005-11-25",
+        "salesearchdate": "2012-11-25",
         "amount": {
           "saleamt": 845000,
-          "salerecdate": "2005-11-25",
+          "salerecdate": "2012-11-25",
           "saledisclosuretype": 0,
           "saledocnum": "0000654156",
           "saletranstype": "Resale"
