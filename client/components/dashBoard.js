@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import * as d3 from 'd3';
 import { connect } from 'react-redux';
+
 import store, { saveProperties, getBarType, getRoomType, getPathType } from '../store';
 import PieChart from './pieChart';
 import BarChart from './barChart';
 import DonutChart from './donutChart';
-import * as d3 from 'd3';
 import LinePath from './linePath';
-import { Link } from 'react-router-dom';
-
+import { generatePieChartSource, generateBarChartSource, generateDonutChartSource } from './util';
 
 // Massage All the data here
 class DashBoard extends Component {
@@ -33,132 +34,17 @@ class DashBoard extends Component {
   }
 
   render() {
-    const { properties, updateBarType, updateRoomType, updatePathType } = this.props;
-
+    const { properties, updateBarType, updateRoomType, updatePathType, barType, roomType } = this.props;
     const recentRecords = properties.filter(property => {
-      return property.sale.amount.saletranstype !== "Nominal - Non/Arms Length Sale";
+      return property.sale.amount.saletranstype !== 'Nominal - Non/Arms Length Sale';
     })
-
-    // pie chart data -------------------------------------------
-    const typeMap = properties.reduce(function (acc, property) {
-      let currentType = property.summary.proptype;
-      if (currentType !== undefined) {
-        if (acc[currentType] === undefined) {
-          acc[currentType] = 1;
-        }
-        else {
-          acc[currentType] += 1;
-        }
-      }
-      return acc;
-    }, {})
-    const pieLabels = Object.keys(typeMap);
-    const piedata = pieLabels.map(label => typeMap[label])
-    // pie chart data -------------------------------------------
-
-    // bar chart data -------------------------------------------
     const _barChoices = ['CONDOMINIUM', 'TRIPLEX', 'DUPLEX'];
-    const targetRecords = recentRecords.filter(property => {
-      return property.sale.calculation.pricepersizeunit != 0
-    })
-
-    let barChoices = targetRecords.reduce(function (acc, property) {
-      const _proptype = property.summary.proptype;
-      if (_barChoices.includes(_proptype) && !acc.includes(_proptype)) {
-        acc.push(_proptype);
-      }
-      return acc;
-    }, [])
-
-    const bardataObj = targetRecords.reduce(function (acc, property) {
-      const proptype = property.summary.proptype;
-      if (barChoices.includes(proptype)) {
-        if (acc[proptype] === undefined) {
-          acc[proptype] = [property];
-        }
-        else {
-          acc[proptype].push(property);
-        }
-      }
-      return acc
-    }, {})
-
-    barChoices.forEach(type => {
-      bardataObj[type] = bardataObj[type].sort(function (propertyA, propertyB) {
-        return Date.parse(propertyA.sale.amount.salerecdate) - Date.parse(propertyB.sale.amount.salerecdate)
-      })
-    });
-
-    const bardata = [];
-    const timeLabels = [];
-    const geoPositions = [];
-    const addresses = [];
-    const propIds = [];
-    let barActiveDecider;
-    if (bardataObj[this.props.barType]) {
-      bardataObj[this.props.barType].forEach(property => {
-        if (property.sale.calculation.pricepersizeunit != 0) {
-          bardata.push(property.sale.calculation.pricepersizeunit);
-          timeLabels.push(property.sale.amount.salerecdate);
-          geoPositions.push([property.location.latitude, property.location.longitude]);
-          addresses.push(property.address.oneLine);
-          propIds.push(property.identifier.obPropId);
-        }
-      })
-      barActiveDecider = this.props.barType;
-    }
-    else if (barChoices.length !== 0) {
-      bardataObj[barChoices[0]].forEach(property => {
-        if (property.sale.calculation.pricepersizeunit != 0) {
-          bardata.push(property.sale.calculation.pricepersizeunit);
-          timeLabels.push(property.sale.amount.salerecdate);
-        }
-      })
-      barActiveDecider = barChoices[0];
-    }
-
-    const barAverage = Math.round(bardata.reduce(function (acc, num) { return acc + num }, 0) / bardata.length, 1);
-
-    // bar chart data -------------------------------------------
-
-    // donut chart data -----------------------------------------
-    const roomType = { "0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, ">5": 0 };
-    const donutChoices = properties.reduce(function (acc, property) {
-      const _proptype = property.summary.proptype;
-      if (_barChoices.includes(_proptype) && !acc.includes(_proptype)) {
-        acc.push(_proptype);
-      }
-      return acc;
-    }, [])
-    const _roomMap = properties.reduce(function (acc, property) {
-      const currRoomType = `${property.building.rooms.beds}`;
-      const proptype = property.summary.proptype;
-      if (_barChoices.includes(proptype) && !acc[proptype]) {
-        acc[proptype] = Object.assign({}, roomType);
-        acc[proptype][currRoomType] += 1;
-      }
-      else if (_barChoices.includes(proptype) && acc[proptype]) {
-        if (currRoomType * 1 > 5) {
-          acc[proptype][">5"] += 1
-        } else {
-          acc[proptype][currRoomType] += 1
-        }
-      }
-      return acc;
-    }, {})
-    let roomMap = {};
-    let donutActiveDecider;
-    if (_roomMap[this.props.roomType]) {
-      roomMap = _roomMap[this.props.roomType];
-      donutActiveDecider = this.props.roomType;
-    } else if (donutChoices.length !== 0) {
-      roomMap = _roomMap[donutChoices[0]];
-      donutActiveDecider = donutChoices[0];
-    }
-
-    const donutLabels = Object.keys(roomMap);
-    const donutdata = donutLabels.map(label => roomMap[label])
-    // donut chart data -----------------------------------------
+    const { pieLabels, piedata }
+      = generatePieChartSource(properties);
+    const { bardata, barChoices, barAverage, barActiveDecider, timeLabels, geoPositions, addresses, propIds }
+      = generateBarChartSource(recentRecords, _barChoices, barType);
+    const { donutLabels, donutdata, donutActiveDecider, donutChoices }
+      = generateDonutChartSource(properties, _barChoices, roomType);
 
     // linePath chart data --------------------------------------
     const _properties = properties.filter(property => {
