@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import store, {
-  fetchNearProperties,
   insertAutoComplete,
-  fetchPropertiesSales,
   getCurrentSpot,
   fetchLatLngAndProperty,
   fetchAddressByLatLng
 } from '../store';
-import { Route } from 'react-router-dom';
 
 class SearchForm extends Component {
 
@@ -38,8 +35,8 @@ class SearchForm extends Component {
           </div>
         </form>
         {
-          this.state.showLoading && <div className='waiting'>
-            <p className='spinner'>
+          this.state.showLoading && <div className="waiting">
+            <p className="spinner">
               Loading...
           </p>
           </div>
@@ -70,8 +67,6 @@ const mapToProps = (dispatch, ownProps) => {
         const [lat, lng] = latLng;
         const thunk2 = fetchAddressByLatLng([lat, lng, ownProps.history]);
         dispatch(thunk2);
-        // const thunk2 = fetchPropertiesSales(spot, ownProps.history);
-        // dispatch(thunk2);
       }
     }
   }

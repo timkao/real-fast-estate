@@ -32,7 +32,6 @@ export const fetchPropertiesSales = (address, history) => {
     axios.post('/api/property/sales', {address1, address2})
     .then( result => result.data)
     .then( propertyObj => {
-      console.log(propertyObj.status);
       const action = getProperties(propertyObj.property);
       dispatch(action);
       history.push('/dashboard');
@@ -40,6 +39,7 @@ export const fetchPropertiesSales = (address, history) => {
   }
 }
 
+// save the properties information to database (Work In Progress)
 export const saveProperties = (properties, center) => {
   return function(dispatch) {
     axios.post('/api/property/save', {mylist: properties, center})

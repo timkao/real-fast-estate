@@ -119,16 +119,6 @@ class BarChart extends Component {
                 )
               })
             }
-            {/* {
-              labels.map((label, index) => {
-                return (
-                  (index === 0 || index === labels.length - 1) &&
-                  <text key={key++} textAnchor={index === 0 ? "start" : "end" } x={ index === 0 ? xScale(index) : xScale(index) + xScale.bandwidth()} y={canvasHeight - 10} fill="black" fontSize="12px">
-                    {label}
-                  </text>
-                )
-              })
-            } */}
           </svg>
         </div>
       </div>

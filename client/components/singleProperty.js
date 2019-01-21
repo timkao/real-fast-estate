@@ -9,10 +9,6 @@ import * as d3 from 'd3';
 
 class SingleProperty extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     const { lat, lng, propId } = this.props.match.params;
     const map = new googleMap('map', lat * 1, lng * 1);
@@ -35,7 +31,7 @@ class SingleProperty extends Component {
         }
       }).filter(row => row.amount !== 0);
     }
-
+    console.log(historydata)
     return (
       <div id="single-property-page">
         <h2 className="lead">{address}</h2>

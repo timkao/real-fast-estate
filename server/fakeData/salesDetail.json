@@ -34,8 +34,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.700776",
-        "longitude": "-73.996111",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 4.95
       },
       "summary": {
@@ -89,12 +89,12 @@
       },
       "address": {
         "country": "US",
-        "countrySubd": "NY",
-        "line1": "90 FURMAN ST APT N-401",
-        "line2": "BROOKLYN, NY 11201",
-        "locality": "Brooklyn",
+        "countrySubd": "NJ",
+        "line1": "121 15TH ST # 125",
+        "line2": "HOBOKEN, NJ 07030",
+        "locality": "Hoboken",
         "matchCode": "ExaStr",
-        "oneLine": "90 FURMAN ST APT N-401, BROOKLYN, NY 11201",
+        "oneLine": "121 15TH ST # 125, HOBOKEN, NJ 07030",
         "postal1": "11201",
         "postal2": "7086",
         "postal3": "C053"
@@ -102,8 +102,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.700776",
-        "longitude": "-73.996111",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 4.95
       },
       "summary": {
@@ -170,8 +170,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.701212",
-        "longitude": "-73.992778",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 4.98,
         "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000006428,ND0000129709,PL3651000,SB0000106233,ZI11201"
       },
@@ -225,12 +225,12 @@
       },
       "address": {
         "country": "US",
-        "countrySubd": "NY",
-        "line1": "55 POPLAR ST APT 3B",
-        "line2": "BROOKLYN, NY 11201",
-        "locality": "Brooklyn",
+        "countrySubd": "NJ",
+        "line1": "916 PALISADE AVE APT 3",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
         "matchCode": "ExaStr",
-        "oneLine": "55 POPLAR ST APT 3B, BROOKLYN, NY 11201",
+        "oneLine": "916 PALISADE AVE APT 3, UNION CITY, NJ 07087",
         "postal1": "11201",
         "postal2": "6935",
         "postal3": "C051"
@@ -238,8 +238,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.701212",
-        "longitude": "-73.992778",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 4.98,
         "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000006428,ND0000129709,PL3651000,SB0000106233,ZI11201"
       },
@@ -306,8 +306,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.702232",
-        "longitude": "-73.989809",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 4.97,
         "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
       },
@@ -361,12 +361,12 @@
       },
       "address": {
         "country": "US",
-        "countrySubd": "NY",
-        "line1": "70 WASHINGTON ST APT 3U",
-        "line2": "BROOKLYN, NY 11201",
-        "locality": "Brooklyn",
+        "countrySubd": "NJ",
+        "line1": "310 10TH ST APT 2",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
         "matchCode": "ExaStr",
-        "oneLine": "70 WASHINGTON ST APT 3U, BROOKLYN, NY 11201",
+        "oneLine": "310 10TH ST APT 2, UNION CITY, NJ 07087",
         "postal1": "11201",
         "postal2": "1444",
         "postal3": "C018"
@@ -374,8 +374,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.702232",
-        "longitude": "-73.989809",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 4.97,
         "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
       },
@@ -432,7 +432,7 @@
         "countrySubd": "NJ",
         "line1": "803 SIP ST APT 301",
         "line2": "UNION CITY, NJ 07087",
-        "locality": "Brooklyn",
+        "locality": "Union City",
         "matchCode": "ExaStr",
         "oneLine": "803 SIP ST APT 301, UNION CITY, NJ 07087",
         "postal1": "11201",
@@ -442,8 +442,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.702232",
-        "longitude": "-73.989809",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 4.97,
         "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
       },
@@ -497,12 +497,12 @@
       },
       "address": {
         "country": "US",
-        "countrySubd": "NY",
-        "line1": "70 WASHINGTON ST APT 2S",
-        "line2": "BROOKLYN, NY 11201",
-        "locality": "Brooklyn",
+        "countrySubd": "NJ",
+        "line1": "600 HARBOR BLVD UNIT 774",
+        "line2": "WEEHAWKEN, NJ 07086",
+        "locality": "Weehawken",
         "matchCode": "ExaStr",
-        "oneLine": "70 WASHINGTON ST APT 2S, BROOKLYN, NY 11201",
+        "oneLine": "600 HARBOR BLVD UNIT 774, WEEHAWKEN, NJ 07086",
         "postal1": "11201",
         "postal2": "1443",
         "postal3": "C018"
@@ -510,8 +510,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.702232",
-        "longitude": "-73.989809",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 4.97,
         "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
       },
@@ -566,11 +566,11 @@
       "address": {
         "country": "US",
         "countrySubd": "NY",
-        "line1": "70 WASHINGTON ST APT 3A",
-        "line2": "BROOKLYN, NY 11201",
+        "line1": "133 33RD ST APT 305",
+        "line2": "UNION CITY, NJ 07087",
         "locality": "Brooklyn",
         "matchCode": "ExaStr",
-        "oneLine": "70 WASHINGTON ST APT 3A, BROOKLYN, NY 11201",
+        "oneLine": "133 33RD ST APT 305, UNION CITY, NJ 07087",
         "postal1": "11201",
         "postal2": "1443",
         "postal3": "C018"
@@ -578,8 +578,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.702232",
-        "longitude": "-73.989809",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 4.97,
         "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
       },
@@ -646,8 +646,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.702232",
-        "longitude": "-73.989809",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 4.97,
         "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
       },
@@ -714,8 +714,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.624377",
-        "longitude": "-74.014168",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 9.99,
         "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000499111,ND0000006440,PL3651000,SB0000106858,SB0000106866,SB0000106885,ZI11228"
       },
@@ -782,8 +782,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.624468",
-        "longitude": "-74.023755",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 9.97,
         "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000006418,ND0000499111,PL3651000,SB0000106866,SB0000106877,SB0000106858,ZI11209"
       },
@@ -850,8 +850,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.624667",
-        "longitude": "-74.038910",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 9.98,
         "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000006418,ND0000499111,PL3651000,SB0000106873,SB0000106858,SB0000106877,ZI11209"
       },
@@ -918,8 +918,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.624905",
-        "longitude": "-74.040462",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 9.97,
         "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000006418,ND0000499111,PL3651000,SB0000106858,SB0000106877,SB0000106873,ZI11209"
       },
@@ -986,8 +986,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.624941",
-        "longitude": "-74.030639",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 9.94,
         "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000006418,ND0000499111,PL3651000,SB0000106877,SB0000106858,SB0000106873,ZI11209"
       },
@@ -1054,8 +1054,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.624981",
-        "longitude": "-74.024270",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 9.94,
         "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000006418,ND0000499111,PL3651000,SB0000106858,SB0000106866,SB0000106877,ZI11209"
       },
@@ -1122,8 +1122,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.625220",
-        "longitude": "-74.007635",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 9.96,
         "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000499111,ND0000006440,PL3651000,SB0000106859,SB0000106882,SB0000106871,ZI11228"
       },
@@ -1190,8 +1190,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.625710",
-        "longitude": "-74.013524",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 9.91,
         "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000499111,ND0000006440,PL3651000,SB0000106866,SB0000106858,SB0000106885,ZI11228"
       },
@@ -1258,8 +1258,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.626301",
-        "longitude": "-74.010913",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 9.87,
         "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000499111,ND0000006440,PL3651000,SB0000106871,SB0000106858,SB0000106885,ZI11228"
       },
@@ -1326,8 +1326,8 @@
       "location": {
         "accuracy": "Street",
         "elevation": 0,
-        "latitude": "40.626388",
-        "longitude": "-74.004440",
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
         "distance": 9.9,
         "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000499111,ND0000006440,PL3651000,SB0000106871,SB0000106857,SB0000106882,ZI11219"
       },

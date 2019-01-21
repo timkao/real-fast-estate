@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import * as d3 from 'd3';
 import { connect } from 'react-redux';
 
 import store, { saveProperties, getBarType, getRoomType, getPathType } from '../store';
@@ -8,12 +7,12 @@ import PieChart from './pieChart';
 import BarChart from './barChart';
 import DonutChart from './donutChart';
 import LinePath from './linePath';
-import { generatePieChartSource, generateBarChartSource, generateDonutChartSource } from './util';
+import { generatePieChartSource, generateBarChartSource, generateDonutChartSource, generateLineChartSource } from './util';
 
 // Massage All the data here
 class DashBoard extends Component {
 
-  componentDidMount() { // why do i did componentWillMount??
+  componentDidMount() {
     const slimResult = this.props.properties.map(property => {
       return {
         address: property.address.oneLine,
@@ -34,7 +33,7 @@ class DashBoard extends Component {
   }
 
   render() {
-    const { properties, updateBarType, updateRoomType, updatePathType, barType, roomType } = this.props;
+    const { properties, updateBarType, updateRoomType, updatePathType, barType, roomType, pathType} = this.props;
     const recentRecords = properties.filter(property => {
       return property.sale.amount.saletranstype !== 'Nominal - Non/Arms Length Sale';
     })
@@ -45,52 +44,8 @@ class DashBoard extends Component {
       = generateBarChartSource(recentRecords, _barChoices, barType);
     const { donutLabels, donutdata, donutActiveDecider, donutChoices }
       = generateDonutChartSource(properties, _barChoices, roomType);
-
-    // linePath chart data --------------------------------------
-    const _properties = properties.filter(property => {
-      return property.sale.amount.saletranstype !== "Nominal - Non/Arms Length Sale" && property.sale.amount.saleamt > 5000;
-    })
-    const parseTime = d3.timeParse("%Y-%m-%d");
-    const _pathdata = _properties.map(property => {
-      return {
-        date: parseTime(property.sale.amount.salerecdate),
-        amount: property.sale.amount.saleamt * 1 / 1000,
-        type: property.summary.proptype,
-        room: property.building.rooms.beds
-      }
-    })
-
-    const pathChoices = _properties.reduce(function (acc, property) {
-      const _proptype = property.summary.proptype;
-      if (_barChoices.includes(_proptype) && !acc.includes(_proptype)) {
-        acc.push(_proptype);
-      }
-      return acc;
-    }, [])
-
-    const pathObj = _pathdata.reduce(function (acc, property) {
-      if (property.type !== undefined && acc[property.type] === undefined) {
-        acc[property.type] = [property];
-      } else if (property.type !== undefined) {
-        acc[property.type].push(property);
-      }
-      return acc;
-    }, {})
-    let pathdata = [];
-    if (pathChoices.includes(this.props.pathType)) {
-      pathdata = pathObj[this.props.pathType];
-    } else if (pathChoices.length !== 0) {
-      pathdata = pathObj[pathChoices[0]];
-    } else {
-      pathdata = [];
-    }
-    if (pathdata.length > 2) {
-      pathdata = pathdata.sort(function (a, b) {
-        return a.date - b.date;
-      })
-    }
-    pathdata = pathdata.filter(data => data.date > 0);
-    // linePath chart data --------------------------------------
+    const { pathChoices, pathdata }
+      = generateLineChartSource(properties, _barChoices, pathType);
 
     return (
       <div>

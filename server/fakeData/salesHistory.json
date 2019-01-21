@@ -1,0 +1,142 @@
+{
+  "status": {
+    "version": "1.0.0",
+    "code": 0,
+    "msg": "SuccessWithResult",
+    "total": 1,
+    "page": 1,
+    "pagesize": 10
+  },
+  "property": [
+    {
+      "identifier": {
+        "obPropId": 18471319108031,
+        "fips": "08031",
+        "apn": "0219204018000",
+        "apnOrig": "219204018000",
+        "attomId": 184713191
+      },
+      "lot": {
+        "lotSize1": 0.1077
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "CO",
+        "line1": "4529 WINONA CT",
+        "line2": "DENVER, CO 80212",
+        "locality": "Denver",
+        "matchCode": "ExaStr",
+        "oneLine": "4529 WINONA CT, DENVER, CO 80212",
+        "postal1": "80212",
+        "postal2": "2512",
+        "postal3": "C037"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "39.778904",
+        "longitude": "-105.047624",
+        "distance": 0,
+        "geoid": "CO08031, CS0891007, DB0803360, MT30001324, ND0000119198, ND0000539537, PL0820000, SB0000076114, SB0000076155, SB0000076161, SB0000135819, ZI80212"
+      },
+      "summary": {
+        "propclass": "Single Family Residence / Townhouse",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1900,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "10"
+      },
+      "building": {
+        "size": {
+          "universalsize": 934
+        },
+        "rooms": {
+          "bathstotal": 1,
+          "beds": 2
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-7-19",
+        "pubDate": "2018-7-24"
+      },
+      "salehistory": [
+        {
+          "salesearchdate": "2004-8-16",
+          "saleTransDate": "2004-8-16",
+          "amount": {
+            "saleamt": 300000,
+            "salerecdate": "2004-8-16",
+            "saledisclosuretype": 0,
+            "saledocnum": "0000181753",
+            "saletranstype": "Stand Alone Finance"
+          },
+          "calculation": {
+            "priceperbed": 0,
+            "pricepersizeunit": 0
+          }
+        },
+        {
+          "salesearchdate": "2007-2-23",
+          "saleTransDate": "2007-2-23",
+          "amount": {
+            "saleamt": 280000,
+            "salerecdate": "2007-2-23",
+            "saledisclosuretype": 0,
+            "saledocnum": "0000038081",
+            "saletranstype": "Stand Alone Finance"
+          },
+          "calculation": {
+            "priceperbed": 0,
+            "pricepersizeunit": 0
+          }
+        },
+        {
+          "salesearchdate": "2009-2-17",
+          "saleTransDate": "2009-2-17",
+          "amount": {
+            "saleamt": 240000,
+            "salerecdate": "2009-2-17",
+            "saledisclosuretype": 0,
+            "saledocnum": "0000027460",
+            "saletranstype": "Stand Alone Finance"
+          },
+          "calculation": {
+            "priceperbed": 0,
+            "pricepersizeunit": 0
+          }
+        },
+        {
+          "salesearchdate": "2012-3-20",
+          "saleTransDate": "2012-3-20",
+          "amount": {
+            "saleamt": 320000,
+            "salerecdate": "2012-3-20",
+            "saledisclosuretype": 0,
+            "saledocnum": "0000039472",
+            "saletranstype": "Stand Alone Finance"
+          },
+          "calculation": {
+            "priceperbed": 0,
+            "pricepersizeunit": 0
+          }
+        },
+        {
+          "salesearchdate": "2015-8-21",
+          "saleTransDate": "2015-8-21",
+          "amount": {
+            "saleamt": 345000,
+            "salerecdate": "2015-8-25",
+            "saledisclosuretype": 0,
+            "saledocnum": "0000119310",
+            "saletranstype": "Resale"
+          },
+          "calculation": {
+            "priceperbed": 172500,
+            "pricepersizeunit": 369
+          }
+        }
+      ]
+    }
+  ]
+}

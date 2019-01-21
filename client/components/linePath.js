@@ -75,11 +75,6 @@ class LineChart extends Component {
 
 
   render() {
-    // const { xScale, yScale, canvasHeight, canvasWidth, padding } = this.props;
-
-    // data
-    // const dataset = this.state.data;
-
     // tranistion
     const canvasWidth = 600;
     const canvasHeight = 300;
@@ -150,10 +145,6 @@ class LineChart extends Component {
               )
             })
           }
-          {/* <path className="line" d={line(zerobed)} stroke='steelblue'></path>
-          <path className="line" d={line(onebed)} stroke='#605A64'></path>
-          <path className="line" d={line(twobed)} stroke='#781011'></path>
-          <path className="line" d={line(threebed)} stroke='#2D261C'></path> */}
           <g id="line-Xaxis" className="axis" transform={`translate(0, ${canvasHeight - padding} )`}></g>
           <g id="line-Yaxis" className="axis" transform={`translate(${padding}, 0)`}></g>
         </svg>

@@ -4,7 +4,7 @@ const apikey = '08ebe91ec661e3835a9a469936689b89';
 const Property = require('../db').models.Property;
 const addressDetails = require('../fakeData/addressDetail.json')
 const salesDetails = require('../fakeData/salesDetail.json')
-
+const salesHistory = require('../fakeData/salesHistory.json')
 
 router.post('/property', (req, res, next) => {
   const radius = 0.25;
@@ -89,6 +89,7 @@ router.post('/property/save', (req, res, next) => {
 })
 
 router.post('/property/history', (req, res, next) => {
+/* cannot make this api code since I no longer has access to the api
   const id = req.body.id;
 
   axios.get(`https://search.onboard-apis.com/propertyapi/v1.0.0/saleshistory/snapshot?id=${id}`, {
@@ -102,6 +103,9 @@ router.post('/property/history', (req, res, next) => {
     res.send(data);
   })
   .catch(next);
+*/
+// Therfore, use fake data instead....
+  res.send(salesHistory)
 })
 
 router.get('/property', (req, res, next) => {
