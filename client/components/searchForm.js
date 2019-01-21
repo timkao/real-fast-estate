@@ -60,13 +60,13 @@ const mapToState = (state) => {
 const mapToProps = (dispatch, ownProps) => {
   return {
     toDashBoard(evt, spot, latLng) {
-      evt.preventDefault();
-      if (evt.target.location.value === '') {
+      evt.preventDefault(); // since it is "submit", this is to prevent page reload....
+      if (evt.target.location.value === '') { // if the user do not type any address, we grab device location
         dispatch(getCurrentSpot(''));
         const thunk = fetchLatLngAndProperty(ownProps.history)
         dispatch(thunk);
       }
-      else {
+      else { // if user do search for a specific location, we send the longitude and latitude to our backend
         const [lat, lng] = latLng;
         const thunk2 = fetchAddressByLatLng([lat, lng, ownProps.history]);
         dispatch(thunk2);

@@ -38,13 +38,12 @@ class DashBoard extends Component {
 
   render() {
     const { properties, updateBarType, updateRoomType, updatePathType } = this.props;
+    console.log('properties', properties)
 
-    // since 2015 years
-    const datelimit = '2015-12-31';
     const recentRecords = properties.filter(property => {
-      return Date.parse(property.sale.amount.salerecdate) > Date.parse(datelimit) && property.sale.amount.saletranstype !== "Nominal - Non/Arms Length Sale";
+      return property.sale.amount.saletranstype !== "Nominal - Non/Arms Length Sale";
     })
-    //console.log(recentRecords);
+    console.log('recentRecords: ', recentRecords);
 
     // pie chart data -------------------------------------------
     const typeMap = properties.reduce(function (acc, property) {
@@ -65,7 +64,7 @@ class DashBoard extends Component {
     // pie chart data -------------------------------------------
 
     // bar chart data -------------------------------------------
-    const _barChoices = ['CONDOMINIUM', 'COOPERATIVE', 'SFR'];
+    const _barChoices = ['CONDOMINIUM', 'TRIPLEX', 'DUPLEX'];
     const targetRecords = recentRecords.filter(property => {
       return property.sale.calculation.pricepersizeunit != 0
     })

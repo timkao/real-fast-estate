@@ -2,6 +2,8 @@ const router = require('express').Router();
 const axios = require('axios');
 const apikey = '08ebe91ec661e3835a9a469936689b89';
 const Property = require('../db').models.Property;
+const addressDetails = require('../fakeData/addressDetail.json')
+const salesDetails = require('../fakeData/salesDetail.json')
 
 
 router.post('/property', (req, res, next) => {
@@ -27,8 +29,9 @@ router.post('/property', (req, res, next) => {
 })
 
 router.post('/property/sales', (req, res, next) => {
+/* cannot make this api code since I no longer has access to the api
   const radius = 0.25;
-  // const propertyType = 'CONDOMINIUM';
+  const propertyType = 'CONDOMINIUM';
   const orderby = 'distance';
   const page = 1;
   const pagesize = 300;
@@ -46,11 +49,15 @@ router.post('/property/sales', (req, res, next) => {
     res.send(data);
   })
   .catch(next);
+*/
+// Therfore, use fake data instead....
+  res.send(salesDetails)
 })
 
 router.post('/property/address', (req, res, next) => {
+/* cannot make this api code since I no longer has access to the api
   const radius = 0.25;
-  // const propertyType = 'CONDOMINIUM';
+  const propertyType = 'CONDOMINIUM';
   const orderby = 'distance';
   const page = 1;
   const pagesize = 5;
@@ -68,6 +75,9 @@ router.post('/property/address', (req, res, next) => {
     res.send(data);
   })
   .catch(next);
+*/
+// Therfore, use fake data instead....
+  res.send(addressDetails)
 })
 
 router.post('/property/save', (req, res, next) => {

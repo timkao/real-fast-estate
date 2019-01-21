@@ -1,0 +1,1069 @@
+{
+  "status": {
+    "version": "1.0.0",
+    "code": 0,
+    "msg": "SuccessWithResult",
+    "total": 10000,
+    "page": 1,
+    "pagesize": 10
+  },
+  "property": [
+    {
+      "identifier": {
+        "obPropId": 18654861234017,
+        "fips": "34017",
+        "apn": "1000197000000044       C001H",
+        "apnOrig": "1000197000000044C001H",
+        "attomId": 186548612
+      },
+      "lot": {
+        "lotSize1": 0.0133
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NJ",
+        "line1": "133 33RD ST APT 1H",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
+        "matchCode": "ExaStr",
+        "oneLine": "133 33RD ST APT 1H, UNION CITY, NJ 07087",
+        "postal1": "07087",
+        "postal2": "5830",
+        "postal3": "C020"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.768958",
+        "longitude": "-74.025686",
+        "distance": 0.01,
+        "geoid": "CO34017, CS3474630, DB3416380, MT30004143, ND0001569894, PL3474630, SB0000133312, SB0000133316, SB0000133318, SB0000133320, SB0000133321, SB0000133322, ZI07087"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1966,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 581
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 1
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-10-11",
+        "pubDate": "2018-10-25"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 18654861734017,
+        "fips": "34017",
+        "apn": "1000197000000044       C003E",
+        "apnOrig": "1000197000000044C003E",
+        "attomId": 186548617
+      },
+      "lot": {
+        "lotSize1": 0.0135
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NJ",
+        "line1": "133 33RD ST APT 3E",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
+        "matchCode": "ExaStr",
+        "oneLine": "133 33RD ST APT 3E, UNION CITY, NJ 07087",
+        "postal1": "07087",
+        "postal2": "5820",
+        "postal3": "C020"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.768958",
+        "longitude": "-74.025686",
+        "distance": 0.01,
+        "geoid": "CO34017, CS3474630, DB3416380, MT30004143, ND0001569894, PL3474630, SB0000133312, SB0000133316, SB0000133318, SB0000133320, SB0000133321, SB0000133322, ZI07087"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1966,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 586
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 1
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 18888076034017,
+        "fips": "34017",
+        "apn": "1000197000000044       C001D",
+        "apnOrig": "1000197000000044C001D",
+        "attomId": 188880760
+      },
+      "lot": {
+        "lotSize1": 0.0133
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NJ",
+        "line1": "133 33RD ST APT 1D",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
+        "matchCode": "ExaStr",
+        "oneLine": "133 33RD ST APT 1D, UNION CITY, NJ 07087",
+        "postal1": "07087",
+        "postal2": "5830",
+        "postal3": "C020"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.768958",
+        "longitude": "-74.025686",
+        "distance": 0.01,
+        "geoid": "CO34017, CS3474630, DB3416380, MT30004143, ND0001569894, PL3474630, SB0000133312, SB0000133316, SB0000133318, SB0000133320, SB0000133321, SB0000133322, ZI07087"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1966,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 581
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 1
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 18888076134017,
+        "fips": "34017",
+        "apn": "1000197000000044       C001G",
+        "apnOrig": "1000197000000044C001G",
+        "attomId": 188880761
+      },
+      "lot": {
+        "lotSize1": 0.0133
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NJ",
+        "line1": "133 33RD ST APT 1G",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
+        "matchCode": "ExaStr",
+        "oneLine": "133 33RD ST APT 1G, UNION CITY, NJ 07087",
+        "postal1": "07087",
+        "postal2": "5830",
+        "postal3": "C020"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.768958",
+        "longitude": "-74.025686",
+        "distance": 0.01,
+        "geoid": "CO34017, CS3474630, DB3416380, MT30004143, ND0001569894, PL3474630, SB0000133312, SB0000133316, SB0000133318, SB0000133320, SB0000133321, SB0000133322, ZI07087"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1966,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 581
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 1
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 19041410434017,
+        "fips": "34017",
+        "apn": "1000197000000044       C002B",
+        "apnOrig": "1000197000000044C002B",
+        "attomId": 190414104
+      },
+      "lot": {
+        "lotSize1": 0.0127
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NJ",
+        "line1": "133 33RD ST APT 2B",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
+        "matchCode": "ExaStr",
+        "oneLine": "133 33RD ST APT 2B, UNION CITY, NJ 07087",
+        "postal1": "07087",
+        "postal2": "5819",
+        "postal3": "C020"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.768958",
+        "longitude": "-74.025686",
+        "distance": 0.01,
+        "geoid": "CO34017, CS3474630, DB3416380, MT30004143, ND0001569894, PL3474630, SB0000133312, SB0000133316, SB0000133318, SB0000133320, SB0000133321, SB0000133322, ZI07087"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1966,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 554
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 1
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 19041410634017,
+        "fips": "34017",
+        "apn": "1000197000000044       C003V",
+        "apnOrig": "1000197000000044C003V",
+        "attomId": 190414106
+      },
+      "lot": {
+        "lotSize1": 0.0127
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NJ",
+        "line1": "133 33RD ST APT 3V",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
+        "matchCode": "ExaStr",
+        "oneLine": "133 33RD ST APT 3V, UNION CITY, NJ 07087",
+        "postal1": "07087",
+        "postal2": "5824",
+        "postal3": "C020"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.768958",
+        "longitude": "-74.025686",
+        "distance": 0.01,
+        "geoid": "CO34017, CS3474630, DB3416380, MT30004143, ND0001569894, PL3474630, SB0000133312, SB0000133316, SB0000133318, SB0000133320, SB0000133321, SB0000133322, ZI07087"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1966,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 554
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 1
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 19452101834017,
+        "fips": "34017",
+        "apn": "1000197000000044       C001M",
+        "apnOrig": "1000197000000044C001M",
+        "attomId": 194521018
+      },
+      "lot": {
+        "lotSize1": 0.0124
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NJ",
+        "line1": "133 33RD ST APT 1M",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
+        "matchCode": "ExaStr",
+        "oneLine": "133 33RD ST APT 1M, UNION CITY, NJ 07087",
+        "postal1": "07087",
+        "postal2": "5819",
+        "postal3": "C020"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.768958",
+        "longitude": "-74.025686",
+        "distance": 0.01,
+        "geoid": "CO34017, CS3474630, DB3416380, MT30004143, ND0001569894, PL3474630, SB0000133312, SB0000133316, SB0000133318, SB0000133320, SB0000133321, SB0000133322, ZI07087"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1966,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 541
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 1
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 19452101934017,
+        "fips": "34017",
+        "apn": "1000197000000044       C002H",
+        "apnOrig": "1000197000000044C002H",
+        "attomId": 194521019
+      },
+      "lot": {
+        "lotSize1": 0.0135
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NJ",
+        "line1": "133 33RD ST APT 2H",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
+        "matchCode": "ExaStr",
+        "oneLine": "133 33RD ST APT 2H, UNION CITY, NJ 07087",
+        "postal1": "07087",
+        "postal2": "5831",
+        "postal3": "C020"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.768958",
+        "longitude": "-74.025686",
+        "distance": 0.01,
+        "geoid": "CO34017, CS3474630, DB3416380, MT30004143, ND0001569894, PL3474630, SB0000133312, SB0000133316, SB0000133318, SB0000133320, SB0000133321, SB0000133322, ZI07087"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1966,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 586
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 1
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 19452102034017,
+        "fips": "34017",
+        "apn": "1000197000000044       C003M",
+        "apnOrig": "1000197000000044C003M",
+        "attomId": 194521020
+      },
+      "lot": {
+        "lotSize1": 0.0127
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NJ",
+        "line1": "133 33RD ST APT 3M",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
+        "matchCode": "ExaStr",
+        "oneLine": "133 33RD ST APT 3M, UNION CITY, NJ 07087",
+        "postal1": "07087",
+        "postal2": "5820",
+        "postal3": "C020"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.768958",
+        "longitude": "-74.025686",
+        "distance": 0.01,
+        "geoid": "CO34017, CS3474630, DB3416380, MT30004143, ND0001569894, PL3474630, SB0000133312, SB0000133316, SB0000133318, SB0000133320, SB0000133321, SB0000133322, ZI07087"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1966,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 554
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 1
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 19577348734017,
+        "fips": "34017",
+        "apn": "1000197000000044       C001E",
+        "apnOrig": "1000197000000044C001E",
+        "attomId": 195773487
+      },
+      "lot": {
+        "lotSize1": 0.0133
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NJ",
+        "line1": "133 33RD ST APT 1E",
+        "line2": "UNION CITY, NJ 07087",
+        "locality": "Union City",
+        "matchCode": "ExaStr",
+        "oneLine": "133 33RD ST APT 1E, UNION CITY, NJ 07087",
+        "postal1": "07087",
+        "postal2": "5830",
+        "postal3": "C020"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.768958",
+        "longitude": "-74.025686",
+        "distance": 0.01,
+        "geoid": "CO34017, CS3474630, DB3416380, MT30004143, ND0001569894, PL3474630, SB0000133312, SB0000133316, SB0000133318, SB0000133320, SB0000133321, SB0000133322, ZI07087"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1966,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 581
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 1
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 32345353236047,
+        "fips": "36047",
+        "apn": "001991098",
+        "apnOrig": "1991098",
+        "attomId": 323453532
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "130 FURMAN ST APT S-107",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "130 FURMAN ST APT S-107, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "1435",
+        "postal3": "C053"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.699969",
+        "longitude": "-73.996508",
+        "distance": 4.99
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 0,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 0
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 17065865136047,
+        "fips": "36047",
+        "apn": "002190005000810000000032",
+        "apnOrig": "002190005000810000000032",
+        "attomId": 170658651
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "81 COLUMBIA HTS APT 32",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "81 COLUMBIA HTS APT 32, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "1653",
+        "postal3": "C051"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.700201",
+        "longitude": "-73.995231",
+        "distance": 4.99,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000006428,ND0000129709,PL3651000,SB0000106233,ZI11201"
+      },
+      "summary": {
+        "propclass": "Single Family Residence / Townhouse",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "COOPERATIVE",
+        "yearbuilt": 0,
+        "propLandUse": "COOPERATIVE",
+        "propIndicator": "10"
+      },
+      "building": {
+        "size": {
+          "universalsize": 0
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 1201759036047,
+        "fips": "36047",
+        "apn": "002140015",
+        "apnOrig": "2140015",
+        "attomId": 12017590
+      },
+      "lot": {
+        "lotSize1": 0.0579
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "12 MIDDAGH ST",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "12 MIDDAGH ST, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "1309",
+        "postal3": "C051"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.700663",
+        "longitude": "-73.994721",
+        "distance": 4.97,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000006428,ND0000129709,PL3651000,SB0000106233,ZI11201"
+      },
+      "summary": {
+        "propclass": "Single Family Residence / Townhouse",
+        "propsubtype": "HOUSE",
+        "proptype": "SFR",
+        "yearbuilt": 1910,
+        "propLandUse": "SFR",
+        "propIndicator": "10"
+      },
+      "building": {
+        "size": {
+          "universalsize": 2480
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 32345346736047,
+        "fips": "36047",
+        "apn": "001991018",
+        "apnOrig": "1991018",
+        "attomId": 323453467
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "90 FURMAN ST APT N-218",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "90 FURMAN ST APT N-218, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "7086",
+        "postal3": "C053"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.700776",
+        "longitude": "-73.996111",
+        "distance": 4.94
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 0,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 0
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 32345347036047,
+        "fips": "36047",
+        "apn": "001991021",
+        "apnOrig": "1991021",
+        "attomId": 323453470
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "90 FURMAN ST APT N-401",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "90 FURMAN ST APT N-401, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "7086",
+        "postal3": "C053"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.700776",
+        "longitude": "-73.996111",
+        "distance": 4.94
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 0,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 0
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 3302563136047,
+        "fips": "36047",
+        "apn": "002071052",
+        "apnOrig": "2071052",
+        "attomId": 33025631
+      },
+      "lot": {
+        "lotSize1": 0.772
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "55 POPLAR ST APT 4K",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "55 POPLAR ST APT 4K, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "6936",
+        "postal3": "C051"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.701212",
+        "longitude": "-73.992778",
+        "distance": 4.97,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000006428,ND0000129709,PL3651000,SB0000106233,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1907,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 958
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 4873531136047,
+        "fips": "36047",
+        "apn": "002071032",
+        "apnOrig": "2071032",
+        "attomId": 48735311
+      },
+      "lot": {
+        "lotSize1": 0.772
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "55 POPLAR ST APT 3B",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "55 POPLAR ST APT 3B, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "6935",
+        "postal3": "C051"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.701212",
+        "longitude": "-73.992778",
+        "distance": 4.97,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000006428,ND0000129709,PL3651000,SB0000106233,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1907,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1069
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 4873531336047,
+        "fips": "36047",
+        "apn": "002071060",
+        "apnOrig": "2071060",
+        "attomId": 48735313
+      },
+      "lot": {
+        "lotSize1": 0.772
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "55 POPLAR ST APT 6F",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "55 POPLAR ST APT 6F, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "6937",
+        "postal3": "C051"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.701212",
+        "longitude": "-73.992778",
+        "distance": 4.97,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000006428,ND0000129709,PL3651000,SB0000106233,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1880,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1048
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 3256568936047,
+        "fips": "36047",
+        "apn": "000451133",
+        "apnOrig": "451133",
+        "attomId": 32565689
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "70 WASHINGTON ST APT 8A",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "70 WASHINGTON ST APT 8A, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "1466",
+        "postal3": "C018"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.702232",
+        "longitude": "-73.989809",
+        "distance": 4.96,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1916,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1342
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 14392622136047,
+        "fips": "36047",
+        "apn": "000451043",
+        "apnOrig": "451043",
+        "attomId": 143926221
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "70 WASHINGTON ST APT 3U",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "70 WASHINGTON ST APT 3U, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "1444",
+        "postal3": "C018"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.702232",
+        "longitude": "-73.989809",
+        "distance": 4.96,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1916,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1204
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-8-10",
+        "pubDate": "2018-8-16"
+      }
+    }
+  ]
+}

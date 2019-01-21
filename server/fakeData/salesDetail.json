@@ -1,0 +1,1371 @@
+{
+  "status": {
+    "version": "1.0.0",
+    "code": 0,
+    "msg": "SuccessWithResult",
+    "total": 10000,
+    "page": 1,
+    "pagesize": 10
+  },
+  "property": [
+    {
+      "identifier": {
+        "obPropId": 32345346736047,
+        "fips": "36047",
+        "apn": "001991018",
+        "apnOrig": "1991018",
+        "attomId": 323453467
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "90 FURMAN ST APT N-218",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "90 FURMAN ST APT N-218, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "7086",
+        "postal3": "C053"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.700776",
+        "longitude": "-73.996111",
+        "distance": 4.95
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 0,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 0
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-7-16",
+        "pubDate": "2018-7-16"
+      },
+      "sale": {
+        "salesearchdate": "2016-12-19",
+        "saleTransDate": "2016-12-19",
+        "amount": {
+          "saleamt": 3872761,
+          "salecode": "Estimated Sale Price",
+          "salerecdate": "2016-12-27",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000457750",
+          "saletranstype": "New Construction"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 499
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 32345347036047,
+        "fips": "36047",
+        "apn": "001991021",
+        "apnOrig": "1991021",
+        "attomId": 323453470
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "90 FURMAN ST APT N-401",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "90 FURMAN ST APT N-401, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "7086",
+        "postal3": "C053"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.700776",
+        "longitude": "-73.996111",
+        "distance": 4.95
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 0,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 0
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-7-16",
+        "pubDate": "2018-7-16"
+      },
+      "sale": {
+        "salesearchdate": "2016-11-15",
+        "saleTransDate": "2016-11-15",
+        "amount": {
+          "saleamt": 2549036,
+          "salecode": "Estimated Sale Price",
+          "salerecdate": "2016-11-25",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000417095",
+          "saletranstype": "New Construction"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 219
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 3302563136047,
+        "fips": "36047",
+        "apn": "002071052",
+        "apnOrig": "2071052",
+        "attomId": 33025631
+      },
+      "lot": {
+        "lotSize1": 0.772
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "55 POPLAR ST APT 4K",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "55 POPLAR ST APT 4K, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "6936",
+        "postal3": "C051"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.701212",
+        "longitude": "-73.992778",
+        "distance": 4.98,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000006428,ND0000129709,PL3651000,SB0000106233,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1907,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 958
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-6-15",
+        "pubDate": "2018-6-15"
+      },
+      "sale": {
+        "salesearchdate": "2006-4-21",
+        "saleTransDate": "2006-4-21",
+        "amount": {
+          "saleamt": 725000,
+          "salerecdate": "2006-5-4",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000247437",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 757
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 4873531136047,
+        "fips": "36047",
+        "apn": "002071032",
+        "apnOrig": "2071032",
+        "attomId": 48735311
+      },
+      "lot": {
+        "lotSize1": 0.772
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "55 POPLAR ST APT 3B",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "55 POPLAR ST APT 3B, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "6935",
+        "postal3": "C051"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.701212",
+        "longitude": "-73.992778",
+        "distance": 4.98,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000006428,ND0000129709,PL3651000,SB0000106233,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1907,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1069
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2010-2-23",
+        "saleTransDate": "2010-2-23",
+        "amount": {
+          "saleamt": 800000,
+          "salerecdate": "2010-3-2",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000070817",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 748
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 3256568936047,
+        "fips": "36047",
+        "apn": "000451133",
+        "apnOrig": "451133",
+        "attomId": 32565689
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "70 WASHINGTON ST APT 8A",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "70 WASHINGTON ST APT 8A, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "1466",
+        "postal3": "C018"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.702232",
+        "longitude": "-73.989809",
+        "distance": 4.97,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1916,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1342
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2007-2-28",
+        "saleTransDate": "2007-2-28",
+        "amount": {
+          "saleamt": 975000,
+          "salerecdate": "2007-3-13",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000135431",
+          "saletranstype": "New Construction"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 727
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 14392622136047,
+        "fips": "36047",
+        "apn": "000451043",
+        "apnOrig": "451043",
+        "attomId": 143926221
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "70 WASHINGTON ST APT 3U",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "70 WASHINGTON ST APT 3U, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "1444",
+        "postal3": "C018"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.702232",
+        "longitude": "-73.989809",
+        "distance": 4.97,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1916,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1204
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2009-8-11",
+        "saleTransDate": "2009-8-11",
+        "amount": {
+          "saleamt": 975000,
+          "salerecdate": "2009-8-18",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000260735",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 810
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 15310522236047,
+        "fips": "36047",
+        "apn": "000451207",
+        "apnOrig": "451207",
+        "attomId": 153105222
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "70 WASHINGTON ST APT 11I",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "70 WASHINGTON ST APT 11I, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "1480",
+        "postal3": "C018"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.702232",
+        "longitude": "-73.989809",
+        "distance": 4.97,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1916,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1417
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2011-1-14",
+        "saleTransDate": "2011-1-14",
+        "amount": {
+          "saleamt": 1345000,
+          "salerecdate": "2011-2-7",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000043769",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 949
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 17041129136047,
+        "fips": "36047",
+        "apn": "000451019",
+        "apnOrig": "451019",
+        "attomId": 170411291
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "70 WASHINGTON ST APT 2S",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "70 WASHINGTON ST APT 2S, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "1443",
+        "postal3": "C018"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.702232",
+        "longitude": "-73.989809",
+        "distance": 4.97,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1916,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1256
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2011-5-13",
+        "saleTransDate": "2011-5-13",
+        "amount": {
+          "saleamt": 0,
+          "salerecdate": "2011-11-9",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000391407",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 538
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 17041129336047,
+        "fips": "36047",
+        "apn": "000451023",
+        "apnOrig": "451023",
+        "attomId": 170411293
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "70 WASHINGTON ST APT 3A",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "70 WASHINGTON ST APT 3A, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "1443",
+        "postal3": "C018"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.702232",
+        "longitude": "-73.989809",
+        "distance": 4.97,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1916,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1342
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2010-9-1",
+        "saleTransDate": "2010-9-1",
+        "amount": {
+          "saleamt": 1112000,
+          "salerecdate": "2010-9-8",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000302012",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 829
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 17066887436047,
+        "fips": "36047",
+        "apn": "000451085",
+        "apnOrig": "451085",
+        "attomId": 170668874
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "70 WASHINGTON ST APT 5S",
+        "line2": "BROOKLYN, NY 11201",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "70 WASHINGTON ST APT 5S, BROOKLYN, NY 11201",
+        "postal1": "11201",
+        "postal2": "1445",
+        "postal3": "C018"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.702232",
+        "longitude": "-73.989809",
+        "distance": 4.97,
+        "geoid": "CO36047,CS3610022,DB3600091,MT30004136,ND0000129709,ND0000057281,PL3651000,SB0000106252,ZI11201"
+      },
+      "summary": {
+        "propclass": "Condominium (residential)",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "CONDOMINIUM",
+        "yearbuilt": 1916,
+        "propLandUse": "CONDOMINIUM",
+        "propIndicator": "11"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1262
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2005-12-19",
+        "saleTransDate": "2005-12-19",
+        "amount": {
+          "saleamt": 814600,
+          "salerecdate": "2006-1-3",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000001585",
+          "saletranstype": "New Construction"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 645
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 14547808336047,
+        "fips": "36047",
+        "apn": "059450043",
+        "apnOrig": "59450043",
+        "attomId": 145478083
+      },
+      "lot": {
+        "lotSize1": 0.0413
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "7502 10TH AVE",
+        "line2": "BROOKLYN, NY 11228",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "7502 10TH AVE, BROOKLYN, NY 11228",
+        "postal1": "11228",
+        "postal2": "2307",
+        "postal3": "C004"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.624377",
+        "longitude": "-74.014168",
+        "distance": 9.99,
+        "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000499111,ND0000006440,PL3651000,SB0000106858,SB0000106866,SB0000106885,ZI11228"
+      },
+      "summary": {
+        "propclass": "Single Family Residence / Townhouse",
+        "propsubtype": "HOUSE",
+        "proptype": "TRIPLEX",
+        "yearbuilt": 1925,
+        "propLandUse": "SFR",
+        "propIndicator": "10"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1288
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-1-27"
+      },
+      "sale": {
+        "salesearchdate": "2012-8-14",
+        "saleTransDate": "2012-8-14",
+        "amount": {
+          "saleamt": 1820000,
+          "salerecdate": "2012-12-17",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000492204",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 456
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 16906335436047,
+        "fips": "36047",
+        "apn": "059990017",
+        "apnOrig": "59990017",
+        "attomId": 169063354
+      },
+      "lot": {
+        "lotSize1": 0.0459
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "528 81ST ST",
+        "line2": "BROOKLYN, NY 11209",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "528 81ST ST, BROOKLYN, NY 11209",
+        "postal1": "11209",
+        "postal2": "4013",
+        "postal3": "C023"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.624468",
+        "longitude": "-74.023755",
+        "distance": 9.97,
+        "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000006418,ND0000499111,PL3651000,SB0000106866,SB0000106877,SB0000106858,ZI11209"
+      },
+      "summary": {
+        "propclass": "\"Duplex, Triplex, Quadplex)\"",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "DUPLEX",
+        "yearbuilt": 1930,
+        "propLandUse": "DUPLEX",
+        "propIndicator": "21"
+      },
+      "building": {
+        "size": {
+          "universalsize": 2080
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2016-9-12",
+        "saleTransDate": "2016-9-12",
+        "amount": {
+          "saleamt": 0,
+          "salerecdate": "2016-10-4",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000349204",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 200
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 16903542536047,
+        "fips": "36047",
+        "apn": "060410057",
+        "apnOrig": "60410057",
+        "attomId": 169035425
+      },
+      "lot": {
+        "lotSize1": 0.0723
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "39 87TH ST",
+        "line2": "BROOKLYN, NY 11209",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "39 87TH ST, BROOKLYN, NY 11209",
+        "postal1": "11209",
+        "postal2": "4215",
+        "postal3": "C011"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.624667",
+        "longitude": "-74.038910",
+        "distance": 9.98,
+        "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000006418,ND0000499111,PL3651000,SB0000106873,SB0000106858,SB0000106877,ZI11209"
+      },
+      "summary": {
+        "propclass": "Single Family Residence / Townhouse",
+        "propsubtype": "HOUSE",
+        "proptype": "TRIPLEX",
+        "yearbuilt": 1925,
+        "propLandUse": "SFR",
+        "propIndicator": "10"
+      },
+      "building": {
+        "size": {
+          "universalsize": 1564
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2016-4-20",
+        "saleTransDate": "2016-4-20",
+        "amount": {
+          "saleamt": 1020000,
+          "salerecdate": "2016-5-3",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000151687",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 652
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 15227982536047,
+        "fips": "36047",
+        "apn": "060400001087010000000332",
+        "apnOrig": "060400001087010000000332",
+        "attomId": 152279825
+      },
+      "lot": {
+        "lotSize1": 0
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "8701 SHORE RD APT 332",
+        "line2": "BROOKLYN, NY 11209",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "8701 SHORE RD APT 332, BROOKLYN, NY 11209",
+        "postal1": "11209",
+        "postal2": "4231",
+        "postal3": "C013"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.624905",
+        "longitude": "-74.040462",
+        "distance": 9.97,
+        "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000006418,ND0000499111,PL3651000,SB0000106858,SB0000106877,SB0000106873,ZI11209"
+      },
+      "summary": {
+        "propclass": "Single Family Residence / Townhouse",
+        "propsubtype": "RESIDENTIAL",
+        "proptype": "COOPERATIVE",
+        "yearbuilt": 0,
+        "propLandUse": "COOPERATIVE",
+        "propIndicator": "10"
+      },
+      "building": {
+        "size": {
+          "universalsize": 0
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2011-1-28",
+        "saleTransDate": "2011-1-28",
+        "amount": {
+          "saleamt": 265000,
+          "salerecdate": "2011-2-16",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000057884",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 339
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 16907141336047,
+        "fips": "36047",
+        "apn": "060240045",
+        "apnOrig": "60240045",
+        "attomId": 169071413
+      },
+      "lot": {
+        "lotSize1": 0.0436
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "8418 3RD AVE",
+        "line2": "BROOKLYN, NY 11209",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "8418 3RD AVE, BROOKLYN, NY 11209",
+        "postal1": "11209",
+        "postal2": "4602",
+        "postal3": "C043"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.624941",
+        "longitude": "-74.030639",
+        "distance": 9.94,
+        "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000006418,ND0000499111,PL3651000,SB0000106877,SB0000106858,SB0000106873,ZI11209"
+      },
+      "summary": {
+        "propclass": "Commercial",
+        "propsubtype": "COMMERCIAL",
+        "proptype": "COMMON AREA",
+        "yearbuilt": 1928,
+        "propLandUse": "COMMON AREA",
+        "propIndicator": "20"
+      },
+      "building": {
+        "size": {
+          "universalsize": 3536
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2006-3-22",
+        "saleTransDate": "2006-3-22",
+        "amount": {
+          "saleamt": 0,
+          "salerecdate": "2006-5-4",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000250462",
+          "saletranstype": "Nominal - Non/Arms Length Sale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 432
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 16906334936047,
+        "fips": "36047",
+        "apn": "059990009",
+        "apnOrig": "59990009",
+        "attomId": 169063349
+      },
+      "lot": {
+        "lotSize1": 0.0538
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "8103 5TH AVE",
+        "line2": "BROOKLYN, NY 11209",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "8103 5TH AVE, BROOKLYN, NY 11209",
+        "postal1": "11209",
+        "postal2": "4109",
+        "postal3": "C027"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.624981",
+        "longitude": "-74.024270",
+        "distance": 9.94,
+        "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000006418,ND0000499111,PL3651000,SB0000106858,SB0000106866,SB0000106877,ZI11209"
+      },
+      "summary": {
+        "propclass": "Commercial",
+        "propsubtype": "COMMERCIAL",
+        "proptype": "COMMON AREA",
+        "yearbuilt": 1931,
+        "propLandUse": "COMMON AREA",
+        "propIndicator": "20"
+      },
+      "building": {
+        "size": {
+          "universalsize": 4355
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-1-27"
+      },
+      "sale": {
+        "salesearchdate": "2013-9-11",
+        "saleTransDate": "2013-9-11",
+        "amount": {
+          "saleamt": 0,
+          "salerecdate": "2014-3-20",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000096735",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 122
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 3260047836047,
+        "fips": "36047",
+        "apn": "061540061",
+        "apnOrig": "61540061",
+        "attomId": 32600478
+      },
+      "lot": {
+        "lotSize1": 0.0643
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "1143 70TH ST",
+        "line2": "BROOKLYN, NY 11228",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "1143 70TH ST, BROOKLYN, NY 11228",
+        "postal1": "11228",
+        "postal2": "1301",
+        "postal3": "C002"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.625220",
+        "longitude": "-74.007635",
+        "distance": 9.96,
+        "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000499111,ND0000006440,PL3651000,SB0000106859,SB0000106882,SB0000106871,ZI11228"
+      },
+      "summary": {
+        "propclass": "\"Duplex, Triplex, Quadplex)\"",
+        "propsubtype": "COMMERCIAL",
+        "proptype": "TRIPLEX",
+        "yearbuilt": 1940,
+        "propLandUse": "TRIPLEX",
+        "propIndicator": "21"
+      },
+      "building": {
+        "size": {
+          "universalsize": 2604
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2007-1-10",
+        "saleTransDate": "2007-1-10",
+        "amount": {
+          "saleamt": 85000,
+          "salerecdate": "2007-4-12",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000188487",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 80
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 14064779336047,
+        "fips": "36047",
+        "apn": "059230031",
+        "apnOrig": "59230031",
+        "attomId": 140647793
+      },
+      "lot": {
+        "lotSize1": 0.0608
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "962 73RD ST",
+        "line2": "BROOKLYN, NY 11228",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "962 73RD ST, BROOKLYN, NY 11228",
+        "postal1": "11228",
+        "postal2": "1914",
+        "postal3": "C003"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.625710",
+        "longitude": "-74.013524",
+        "distance": 9.91,
+        "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000499111,ND0000006440,PL3651000,SB0000106866,SB0000106858,SB0000106885,ZI11228"
+      },
+      "summary": {
+        "propclass": "\"Duplex, Triplex, Quadplex)\"",
+        "propsubtype": "MISCELLANEOUS INDUSTRIAL",
+        "proptype": "DUPLEX",
+        "yearbuilt": 1965,
+        "propLandUse": "DUPLEX",
+        "propIndicator": "21"
+      },
+      "building": {
+        "size": {
+          "universalsize": 2160
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2009-5-5",
+        "saleTransDate": "2009-5-5",
+        "amount": {
+          "saleamt": 960000,
+          "salerecdate": "2009-5-15",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000146344",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 444
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 4525353836047,
+        "fips": "36047",
+        "apn": "058980073",
+        "apnOrig": "58980073",
+        "attomId": 45253538
+      },
+      "lot": {
+        "lotSize1": 0.0459
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "1027 71ST ST",
+        "line2": "BROOKLYN, NY 11228",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "1027 71ST ST, BROOKLYN, NY 11228",
+        "postal1": "11228",
+        "postal2": "1214",
+        "postal3": "C002"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.626301",
+        "longitude": "-74.010913",
+        "distance": 9.87,
+        "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000499111,ND0000006440,PL3651000,SB0000106871,SB0000106858,SB0000106885,ZI11228"
+      },
+      "summary": {
+        "propclass": "\"Duplex, Triplex, Quadplex)\"",
+        "propsubtype": "COMMERCIAL",
+        "proptype": "TRIPLEX",
+        "yearbuilt": 1899,
+        "propLandUse": "TRIPLEX",
+        "propIndicator": "21"
+      },
+      "building": {
+        "size": {
+          "universalsize": 3210
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-3-5",
+        "pubDate": "2018-3-8"
+      },
+      "sale": {
+        "salesearchdate": "2018-1-19",
+        "saleTransDate": "2018-1-19",
+        "amount": {
+          "saleamt": 1200000,
+          "salerecdate": "2018-1-26",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000032349",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 374
+        }
+      }
+    },
+    {
+      "identifier": {
+        "obPropId": 700653536047,
+        "fips": "36047",
+        "apn": "057600003",
+        "apnOrig": "57600003",
+        "attomId": 7006535
+      },
+      "lot": {
+        "lotSize1": 0.0459
+      },
+      "address": {
+        "country": "US",
+        "countrySubd": "NY",
+        "line1": "6615 12TH AVE",
+        "line2": "BROOKLYN, NY 11219",
+        "locality": "Brooklyn",
+        "matchCode": "ExaStr",
+        "oneLine": "6615 12TH AVE, BROOKLYN, NY 11219",
+        "postal1": "11219",
+        "postal2": "5909",
+        "postal3": "C037"
+      },
+      "location": {
+        "accuracy": "Street",
+        "elevation": 0,
+        "latitude": "40.626388",
+        "longitude": "-74.004440",
+        "distance": 9.9,
+        "geoid": "CO36047,CS3610022,DB3600151,MT30004136,ND0000499111,ND0000006440,PL3651000,SB0000106871,SB0000106857,SB0000106882,ZI11219"
+      },
+      "summary": {
+        "propclass": "\"Duplex, Triplex, Quadplex)\"",
+        "propsubtype": "COMMERCIAL",
+        "proptype": "TRIPLEX",
+        "yearbuilt": 1970,
+        "propLandUse": "TRIPLEX",
+        "propIndicator": "21"
+      },
+      "building": {
+        "size": {
+          "universalsize": 2915
+        },
+        "rooms": {
+          "bathstotal": 0,
+          "beds": 0
+        }
+      },
+      "vintage": {
+        "lastModified": "2018-1-27",
+        "pubDate": "2018-3-1"
+      },
+      "sale": {
+        "salesearchdate": "2005-11-25",
+        "amount": {
+          "saleamt": 845000,
+          "salerecdate": "2005-11-25",
+          "saledisclosuretype": 0,
+          "saledocnum": "0000654156",
+          "saletranstype": "Resale"
+        },
+        "calculation": {
+          "priceperbed": 0,
+          "pricepersizeunit": 290
+        }
+      }
+    }
+  ]
+}

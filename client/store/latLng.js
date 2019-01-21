@@ -12,6 +12,7 @@ export const getLatLng = (latLng) => {
   }
 }
 
+// since I no longer has access to "property"
 export const fetchAddressByLatLng = ([lat, lng, history]) => {
   return function(dispatch) {
     axios.post('/api/property/address', {lat, lng})
@@ -22,6 +23,9 @@ export const fetchAddressByLatLng = ([lat, lng, history]) => {
       dispatch(action);
       const thunk = fetchPropertiesSales(address, history);
       dispatch(thunk);
+    })
+    .catch(err => {
+      console.log(err)
     })
   }
 }
